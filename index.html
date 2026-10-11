@@ -59,6 +59,18 @@
 @media(max-width:980px){.testing-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.experience-layout{grid-template-columns:1fr}}
 @media(max-width:560px){.testing-flow{grid-template-columns:1fr}.testing-step{min-height:0}.testing-step h3{margin-top:15px}.step-focus{padding-top:12px}.testing-example{grid-template-columns:1fr;gap:10px;padding:18px}.experience-card{padding:17px}.experience-top{flex-wrap:wrap;align-items:flex-start}.employment-date{margin-left:56px;margin-top:-6px}.impact-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.impact-grid>div{padding:9px}.impact-grid strong{font-size:15px}.impact-grid span{font-size:7px}}
 
+
+/* Role-specific achievements, tied to the displayed employment period */
+.accomplishments-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:22px 0 13px;padding-top:2px}
+.accomplishments-heading .section-kicker{margin:0;color:var(--blue)}
+.accomplishments-heading>span{font-size:9px;color:var(--dim);text-align:right}
+.accomplishment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.accomplishment-item{min-width:0;padding:16px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(145deg,rgba(121,195,255,.035),rgba(255,255,255,.012))}
+.accomplishment-index{display:block;font:8px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.075em;color:var(--blue);line-height:1.6}
+.accomplishment-item h4{margin:11px 0 7px;color:#e0e9f6;font-size:11px;line-height:1.55}
+.accomplishment-item p{margin:0;color:var(--muted);font-size:10px;line-height:1.85}
+@media(max-width:560px){.accomplishment-grid{grid-template-columns:1fr}.accomplishments-heading{align-items:flex-start;flex-direction:column;gap:5px}.accomplishments-heading>span{text-align:left}}
+
 </style>
 </head>
 <body>
@@ -140,16 +152,13 @@
 <div class="work-history">
 <article class="experience-card">
 <div class="experience-top"><span class="company-mark">AZ</span><div class="company-copy"><h3>Azend Technologies Pvt Ltd</h3><p>Associate Quality Assurance Engineer · Colombo, Sri Lanka</p></div><span class="employment-date">APR 2024 — PRESENT</span></div>
-<div class="impact-grid" aria-label="Experience highlights"><div><strong>5</strong><span>web-based projects</span></div><div><strong>100+</strong><span>automated test cases</span></div><div><strong>End-to-end</strong><span>manual and automation QA</span></div></div>
-<h4 class="experience-subheading">Responsibilities & contributions</h4>
-<ul class="experience-highlights">
-<li><b>Test planning and execution</b><span>Designed and executed test plans, test cases, and test scripts across five web-based projects, covering manual, automation, functional, regression, smoke, API, ad-hoc, and black-box testing.</span></li>
-<li><b>Automation development</b><span>Developed and maintained 100+ automated test cases using Cypress, TypeScript, and Cucumber to improve regression coverage and reduce repetitive manual testing effort.</span></li>
-<li><b>API, regression and release validation</b><span>Performed API testing, functional validation, regression testing, and deployment validation against business and technical requirements.</span></li>
-<li><b>Defect investigation and documentation</b><span>Tracked defects through the testing lifecycle, including debugging, root-cause investigation, and retesting. Maintained test plans, test cases, defect reports, test procedures, execution results, and QA reports.</span></li>
-<li><b>Test management and collaboration</b><span>Used Jira and Azure DevOps for test management, defect tracking, execution, and reporting. Worked with developers, clients, and cross-functional stakeholders to clarify requirements, investigate issues, and communicate QA status.</span></li>
-<li><b>Continuous improvement and mentoring</b><span>Identified high-risk areas and testing gaps to support release confidence; applied AI-assisted approaches and AI agents for test analysis, test design, defect investigation, and documentation; mentored junior QA interns on test design, defect reporting, QA practices, and Agile workflows.</span></li>
-</ul>
+<div class="accomplishments-heading"><p class="section-kicker">ACCOMPLISHMENTS · APR 2024 — PRESENT</p><span>Selected outcomes from this role</span></div>
+<div class="accomplishment-grid">
+<article class="accomplishment-item"><span class="accomplishment-index">01 / AUTOMATION COVERAGE</span><h4>Expanded automated regression coverage</h4><p>Developed and maintained 100+ Cypress, TypeScript, and Cucumber test cases across five web-based projects, improving regression coverage and reducing repetitive manual testing effort.</p></article>
+<article class="accomplishment-item"><span class="accomplishment-index">02 / RELEASE VALIDATION</span><h4>Improved confidence in changes and releases</h4><p>Validated application behaviour through functional, regression, API, and deployment testing; identified high-risk areas, system limitations, and testing gaps against business and technical requirements.</p></article>
+<article class="accomplishment-item"><span class="accomplishment-index">03 / DEFECT RESOLUTION</span><h4>Made issues easier to investigate and retest</h4><p>Contributed to defect analysis, debugging, root-cause investigation, and retesting, while maintaining structured test plans, cases, defect reports, execution results, and QA reports.</p></article>
+<article class="accomplishment-item"><span class="accomplishment-index">04 / TEAM & PROCESS</span><h4>Supported team capability and QA efficiency</h4><p>Collaborated with developers, clients, and stakeholders; mentored junior QA interns; and applied AI-assisted approaches to support test analysis, test design, defect investigation, and documentation.</p></article>
+</div>
 </article>
 <article class="experience-card">
 <div class="experience-top"><span class="company-mark">DI</span><div class="company-copy"><h3>:Different</h3><p>Quality Assurance Intern · Colombo, Sri Lanka</p></div><span class="employment-date">JUL 2022 — JUL 2023</span></div>
