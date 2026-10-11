@@ -19,6 +19,16 @@ A responsive personal portfolio for **Raagul Sivanathan, Quality Assurance Engin
   - **[Postman + Newman API Testing](https://github.com/sraagul99/postman-newman-api-testing)** — [coverage matrix](https://github.com/sraagul99/postman-newman-api-testing/blob/main/docs/test-coverage.md), [Postman collection](https://github.com/sraagul99/postman-newman-api-testing/blob/main/postman/collections/QA%20Practice%20API.postman_collection.json), and [GitHub Actions](https://github.com/sraagul99/postman-newman-api-testing/actions)
 - Technical toolkit, CV download, and direct contact links
 
+## Verified execution evidence
+
+The portfolio includes a dated snapshot of recent successful runs recorded on 11 October 2026:
+
+- [Playwright UI tests](https://github.com/sraagul99/playwright-ui-automation/actions/runs/38159712112): 11 tests passed.
+- [Cypress + Cucumber BDD](https://github.com/sraagul99/cypress-bdd-cucumber-typescript/actions/runs/38160640406): 12 scenarios passed.
+- [Postman + Newman API tests](https://github.com/sraagul99/postman-newman-api-testing/actions/runs/38160228089): 7 requests, 24 assertions, 0 failures.
+
+These are specific recorded runs against public demo environments; they are not a guarantee of later run results or a performance benchmark. The [API QA case study](https://sraagul99.github.io/qa-case-study.html) explains the test design, risks, assertions, limitations, and evidence links.
+
 ## Design and implementation
 
 - Dark, futuristic engineering visual style with restrained blue and cyan accents
