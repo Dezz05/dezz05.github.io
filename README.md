@@ -1,32 +1,51 @@
-# Raagul Sivanathan — QA Portfolio
+# Raagul Sivanathan — Quality Engineering Portfolio
 
-A responsive, static portfolio website for a Quality Assurance Engineer. Built with plain HTML, CSS, and JavaScript embedded in `index.html`; it requires no build step, package installation, or backend.
+A responsive personal portfolio for **Raagul Sivanathan, Quality Assurance Engineer**. The site is built with plain HTML, CSS, and JavaScript, with no framework, package installation, or build step.
 
-## Sections
+**Live-site URL:** https://sraagul99.github.io/  
+**GitHub profile:** https://github.com/sraagul99  
+**LinkedIn:** https://www.linkedin.com/in/sraagul
 
-- Professional introduction and QA approach
-- Playwright UI automation project
-- Cypress + Cucumber BDD project
-- Postman + Newman API testing project
-- Experience timeline and technical toolkit
-- LinkedIn and GitHub contact links
+## Portfolio content
 
-## Publish with GitHub Pages
+- QA positioning and a visual quality-engineering workflow
+- CV-grounded experience, including the progression from intern to Associate QA Engineer at Azend Technologies
+- Selected evidence from three public repositories:
+  - [Playwright UI Automation](https://github.com/sraagul99/playwright-ui-automation)
+  - [Cypress + Cucumber BDD](https://github.com/sraagul99/cypress-bdd-cucumber-typescript)
+  - [Postman + Newman API Testing](https://github.com/sraagul99/postman-newman-api-testing)
+- Links to each repository's GitHub Actions workflow runs and current workflow badge
+- Testing philosophy, education, LambdaTest Test Automation Professional certificate, and grouped technical toolkit
+- Email, LinkedIn, and GitHub contact paths
 
-This is the user-site repository `sraagul99.github.io`, so the expected URL is:
+## Design and implementation
 
-**https://sraagul99.github.io/**
+- Dark, technical visual identity with restrained blue and cyan accents
+- Responsive layout and mobile navigation
+- Semantic page sections, skip link, focus-friendly navigation, and reduced-motion support
+- Open Graph metadata and schema.org Person data
+- GitHub Actions badges are dynamic: their displayed state can change with future workflow runs
+- No front-end libraries or external JavaScript dependencies
+
+## GitHub Pages deployment
+
+This repository is named `sraagul99.github.io`, so it is intended to publish as a user site.
 
 1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, select **Deploy from a branch**.
+2. Under **Build and deployment**, choose **Deploy from a branch**.
 3. Select branch **main** and folder **/(root)**, then save.
-4. Wait for GitHub Pages to finish publishing. The Pages settings will show the deployment status and URL.
+4. Wait for GitHub Pages to finish deploying. Confirm the status and published URL in the Pages settings.
 
-The homepage is self-contained. The only additional asset is `favicon.svg`.
+The site is self-contained in `index.html`, with `favicon.svg`, `robots.txt`, and `sitemap.xml` as supporting assets. The `.nojekyll` file disables Jekyll processing.
 
-## Before sharing widely
+## Editing the portfolio
 
-- Confirm that the employment dates and descriptions reflect your current CV.
-- Add a CV download only when you have chosen the exact file you want to make public.
-- The project cards link to the public repositories and their Actions pages. The demo applications and APIs used by those projects can change over time.
-- No personal email or phone number is published on the site.
+Most content and styling live in `index.html`. If you update the employment timeline, experience metrics, skills, education, certification, or project claims, keep them aligned with the current CV and the actual repository contents. Project cards link to the repositories and CI logs so visitors can inspect the evidence.
+
+## Privacy and accuracy
+
+- The public site intentionally omits the street address and reference contact details from the CV.
+- The professional contact email is shown for recruitment and networking.
+- A downloadable CV has not been attached; use a specifically prepared public version rather than publishing a CV containing a private address or third-party referee details.
+- The portfolio claims about five web-based projects and 100+ automated test cases are drawn from the supplied CV. The three linked GitHub repositories are independent portfolio demonstrations using third-party demo systems, not source code from employer projects.
+- Demo applications, demo credentials, data, APIs, and live workflow results may change. Review repository documentation and run details before interpreting a badge or execution result.
