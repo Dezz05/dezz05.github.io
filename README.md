@@ -11,11 +11,11 @@ A responsive personal portfolio for **Raagul Sivanathan, Quality Assurance Engin
 - Professional summary and CV-based accomplishment bullets
 - Experience at Azend Technologies (Apr 2024–Present) and :Different (Jul 2022–Jul 2023)
 - Education and LambdaTest Test Automation Professional credential
-- Three focused QA projects, each linked to its source repository and CI evidence:
-  - [Playwright UI Automation](https://github.com/sraagul99/playwright-ui-automation)
-  - [Cypress + Cucumber BDD](https://github.com/sraagul99/cypress-bdd-cucumber-typescript)
-  - [Postman + Newman API Testing](https://github.com/sraagul99/postman-newman-api-testing)
-- Technical toolkit and direct contact links
+- Three focused QA projects with source code, CI evidence, and directly accessible QA artifacts:
+  - **[Playwright UI Automation](https://github.com/sraagul99/playwright-ui-automation)** — [test strategy](https://github.com/sraagul99/playwright-ui-automation/blob/main/docs/test-strategy.md), [test cases](https://github.com/sraagul99/playwright-ui-automation/blob/main/docs/test-cases.md), and [GitHub Actions](https://github.com/sraagul99/playwright-ui-automation/actions)
+  - **[Cypress + Cucumber BDD](https://github.com/sraagul99/cypress-bdd-cucumber-typescript)** — [manual QA pack](https://github.com/sraagul99/cypress-bdd-cucumber-typescript/tree/main/manual-testing), [traceability matrix](https://github.com/sraagul99/cypress-bdd-cucumber-typescript/blob/main/docs/TRACEABILITY-MATRIX.md), and [GitHub Actions](https://github.com/sraagul99/cypress-bdd-cucumber-typescript/actions)
+  - **[Postman + Newman API Testing](https://github.com/sraagul99/postman-newman-api-testing)** — [coverage matrix](https://github.com/sraagul99/postman-newman-api-testing/blob/main/docs/test-coverage.md), [Postman collection](https://github.com/sraagul99/postman-newman-api-testing/blob/main/postman/collections/QA%20Practice%20API.postman_collection.json), and [GitHub Actions](https://github.com/sraagul99/postman-newman-api-testing/actions)
+- Technical toolkit, education, certification, and direct contact links
 - Downloadable resume PDF
 
 ## Design and implementation
@@ -24,7 +24,7 @@ A responsive personal portfolio for **Raagul Sivanathan, Quality Assurance Engin
 - Responsive navigation and layouts
 - Semantic sections, skip link, keyboard-friendly navigation, and reduced-motion support
 - Open Graph metadata and Person structured data
-- Workflow badges show live repository status; review the linked GitHub Actions run for details
+- Workflow badges display current repository status; inspect the corresponding Actions run for test details
 - Static site: no back-end service or third-party JavaScript dependencies
 
 ## GitHub Pages deployment
@@ -40,4 +40,4 @@ The homepage is `index.html`. Supporting files include `favicon.svg`, `robots.tx
 
 ## Maintenance
 
-Keep dates, skills, accomplishments, and credential details consistent with the latest CV and professional profiles. Claims about project behaviour or CI status should be checked against the repositories and their latest workflow runs.
+Keep dates, skills, accomplishments, and credential details consistent with the latest CV and professional profiles. Claims about project behaviour or CI status should be checked against the repositories and their latest workflow runs. The public demo applications/APIs can change, so describe observed run results rather than guaranteeing that a workflow will always pass.
