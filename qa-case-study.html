@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b11">
+<meta name="description" content="A QA case study by Raagul Sivanathan showing Postman and Newman API test design, response-contract assertions, negative coverage, and a verified CI execution snapshot.">
+<meta property="og:title" content="API Contract Testing Case Study | Raagul Sivanathan">
+<meta property="og:description" content="Practical API test design and verified Newman CI evidence.">
+<title>API Contract Testing Case Study — Raagul Sivanathan</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+:root{color-scheme:dark;--bg:#080b11;--surface:#0e1520;--surface2:#121c29;--line:rgba(166,195,230,.15);--line2:rgba(166,195,230,.28);--text:#eff5ff;--muted:#a1afc2;--dim:#738399;--blue:#79c3ff;--cyan:#74f0e4;--green:#83e6b8;--amber:#e8bd75;--max:1040px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 80% 4%,rgba(44,113,181,.15),transparent 30%),linear-gradient(rgba(127,173,221,.024) 1px,transparent 1px),linear-gradient(90deg,rgba(127,173,221,.024) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}a{color:inherit;text-decoration:none}.topbar{height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-size:10px;font-weight:850;letter-spacing:.13em}.brand span{color:var(--blue)}.back{font-size:11px;font-weight:750;color:var(--muted)}.back:hover,.text-link:hover{color:var(--blue)}main{padding-bottom:80px}.hero{padding:73px 0 43px;max-width:860px}.kicker{font:850 9px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--blue);letter-spacing:.16em;text-transform:uppercase;margin:0 0 15px}.hero h1{font-size:clamp(38px,6vw,59px);line-height:1.08;letter-spacing:-.065em;margin:0 0 18px}.accent{background:linear-gradient(100deg,var(--blue),var(--cyan));color:transparent;background-clip:text;-webkit-background-clip:text}.lede{max-width:760px;color:var(--muted);font-size:14px;margin:0}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:23px}.chips span{font-size:9px;color:#c3d2e5;border:1px solid var(--line);border-radius:6px;padding:5px 8px;background:rgba(255,255,255,.018)}.section{padding:37px 0}.section-head{margin-bottom:18px}.section-head h2{font-size:25px;line-height:1.2;letter-spacing:-.045em;margin:0 0 8px}.section-head p{font-size:12px;color:var(--muted);max-width:730px;margin:0}.summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.summary-card{padding:17px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,rgba(18,29,44,.86),rgba(10,15,22,.84))}.summary-card strong{display:block;font-size:27px;line-height:1.2;letter-spacing:-.055em}.summary-card strong.green{color:var(--green)}.summary-card span{display:block;margin-top:7px;font-size:9px;color:var(--dim);font-weight:750;letter-spacing:.08em;text-transform:uppercase}.callout{padding:16px 18px;border:1px solid rgba(121,195,255,.2);border-radius:10px;background:rgba(121,195,255,.035);font-size:12px;color:var(--muted)}.callout b{color:#e4effb}.risk-list{display:grid;gap:9px}.risk{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.012)}.risk-tag{font:850 8px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--blue);letter-spacing:.1em;padding-top:3px}.risk h3{font-size:12px;margin:0 0 4px}.risk p{font-size:11px;color:var(--muted);margin:0}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;min-width:650px;font-size:11px}th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}th{background:rgba(121,195,255,.06);color:#d9e9fb;font-size:9px;letter-spacing:.08em;text-transform:uppercase}td{color:var(--muted)}td:first-child{white-space:nowrap;color:var(--blue);font:10px ui-monospace,SFMono-Regular,Consolas,monospace}tr:last-child td{border-bottom:0}.decisions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.decision{padding:18px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.012)}.decision h3{font-size:13px;margin:0 0 8px}.decision p{font-size:11px;color:var(--muted);margin:0}.evidence-list{display:grid;gap:9px}.evidence{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.012)}.evidence span{display:block;font-size:11px;font-weight:750}.evidence small{display:block;margin-top:3px;font-size:9px;color:var(--dim)}.text-link{color:var(--blue);font-size:10px;font-weight:850;white-space:nowrap}.footnote{font-size:10px;color:var(--dim);line-height:1.8}.footer{border-top:1px solid var(--line);padding:23px 0;color:var(--dim);font-size:9px}.footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:700px){.wrap{width:calc(100% - 30px)}.topbar{height:66px}.hero{padding-top:52px}.hero h1{font-size:41px}.summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.risk{grid-template-columns:1fr;gap:3px}.decisions{grid-template-columns:1fr}.section{padding:27px 0}.section-head h2{font-size:23px}.evidence{align-items:flex-start;flex-direction:column;gap:8px}.text-link{white-space:normal}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="wrap topbar"><a class="brand" href="index.html#top">RAAGUL SIVANATHAN<span>.</span></a><a class="back" href="index.html#work">← Back to portfolio</a></header>
+<main class="wrap">
+<section class="hero">
+<p class="kicker">QA CASE STUDY / API TESTING</p>
+<h1>Testing API contracts<br><span class="accent">beyond status codes.</span></h1>
+<p class="lede">A practical review of the Postman + Newman portfolio project: how the scenarios were chosen, which response risks were covered, and what the latest recorded CI execution demonstrated. This is an independent portfolio project against the public JSONPlaceholder demo API, not client or production work.</p>
+<div class="chips"><span>Postman</span><span>Newman</span><span>REST API</span><span>JavaScript assertions</span><span>GitHub Actions</span></div>
+</section>
+<section class="section">
+<div class="section-head"><p class="kicker">01 / EXECUTION SNAPSHOT</p><h2>Observed in the recorded CI run.</h2><p>The successful GitHub Actions run on 11 October 2026 executed the collection against the public demo service.</p></div>
+<div class="summary-grid">
+<div class="summary-card"><strong>7</strong><span>Requests executed</span></div>
+<div class="summary-card"><strong>24</strong><span>Assertions executed</span></div>
+<div class="summary-card"><strong class="green">0</strong><span>Failed assertions</span></div>
+<div class="summary-card"><strong>25 ms</strong><span>Average response time in this run</span></div>
+</div>
+<p class="footnote">This is one execution snapshot, not a performance benchmark or a guarantee of future results. The same run recorded a 323 ms total collection duration and individual response times from 15–76 ms.</p>
+</section>
+<section class="section">
+<div class="section-head"><p class="kicker">02 / TEST OBJECTIVE</p><h2>What needed to be validated?</h2><p>A successful HTTP status alone doesn't confirm a response is usable. The checks also validate response format, required fields, types, values, and selected negative paths.</p></div>
+<div class="callout"><b>Test question:</b> Does each representative API response meet the contract expected by a consuming client, including errors and CRUD-style demo responses?</div>
+</section>
+<section class="section">
+<div class="section-head"><p class="kicker">03 / RISK-BASED COVERAGE</p><h2>Scenarios selected and why.</h2></div>
+<div class="risk-list">
+<div class="risk"><span class="risk-tag">HIGH / DATA</span><div><h3>List and retrieve users</h3><p>Validate status, JSON content type, non-empty list response, required user fields and their types, and the requested ID for a single-user response.</p></div></div>
+<div class="risk"><span class="risk-tag">HIGH / NEGATIVE</span><div><h3>Missing user and unknown route</h3><p>Check service-specific not-found behaviour instead of assuming every invalid resource returns the same response shape across all APIs.</p></div></div>
+<div class="risk"><span class="risk-tag">MED / CONTRACT</span><div><h3>Create and update a post</h3><p>Check the documented success status and verify returned IDs and relevant fields match the request or intended updated values.</p></div></div>
+<div class="risk"><span class="risk-tag">MED / RESPONSE</span><div><h3>Delete response</h3><p>Validate the expected success response while tolerating either an empty body or an empty JSON object, both observed as compatible response forms for this demo.</p></div></div>
+<div class="risk"><span class="risk-tag">CROSS-CUTTING</span><div><h3>Response quality and timing</h3><p>Check content type and a configurable response-time threshold alongside the business-relevant body assertions. Timing checks here are lightweight guardrails, not load or stress testing.</p></div></div>
+</div>
+</section>
+<section class="section">
+<div class="section-head"><p class="kicker">04 / TEST DESIGN DECISIONS</p><h2>Why these checks matter.</h2></div>
+<div class="decisions">
+<article class="decision"><h3>Assert the contract, not just the status</h3><p>A 200 response can still contain the wrong ID, missing properties, or unexpected data types. The collection checks meaningful fields as well as status codes.</p></article>
+<article class="decision"><h3>Keep expectations service-specific</h3><p>Missing-resource behavior and delete response bodies can differ by API. Expectations are documented against JSONPlaceholder and should be re-baselined if the target changes.</p></article>
+<article class="decision"><h3>Make execution repeatable</h3><p>The collection runs locally with Newman and in GitHub Actions, with a JUnit report artifact available from the run.</p></article>
+<article class="decision"><h3>State limitations clearly</h3><p>JSONPlaceholder simulates write operations. Successful POST, PUT, and DELETE responses do not prove that data persisted on the server. Authentication, security penetration, and load testing are outside this project's scope.</p></article>
+</div>
+</section>
+<section class="section">
+<div class="section-head"><p class="kicker">05 / REPRODUCIBLE EVIDENCE</p><h2>Inspect the actual project.</h2></div>
+<div class="evidence-list">
+<a class="evidence" href="https://github.com/sraagul99/postman-newman-api-testing/actions/runs/38160228089" target="_blank" rel="noreferrer"><div><span>Recorded GitHub Actions run</span><small>7 requests · 24 assertions · 0 failures</small></div><strong class="text-link">Open run ↗</strong></a>
+<a class="evidence" href="https://github.com/sraagul99/postman-newman-api-testing/actions/runs/38160228089/artifacts/11709868134" target="_blank" rel="noreferrer"><div><span>JUnit report artifact</span><small>Downloadable CI report from the recorded run; GitHub artifact retention applies</small></div><strong class="text-link">Open artifact ↗</strong></a>
+<a class="evidence" href="https://github.com/sraagul99/postman-newman-api-testing/blob/main/docs/test-coverage.md" target="_blank" rel="noreferrer"><div><span>Request-level coverage matrix</span><small>Scenario IDs and assertions by endpoint</small></div><strong class="text-link">View matrix ↗</strong></a>
+<a class="evidence" href="https://github.com/sraagul99/postman-newman-api-testing/blob/main/postman/collections/QA%20Practice%20API.postman_collection.json" target="_blank" rel="noreferrer"><div><span>Postman collection</span><small>Inspectable requests and test scripts</small></div><strong class="text-link">View collection ↗</strong></a>
+</div>
+</section>
+<section class="section">
+<div class="section-head"><p class="kicker">06 / RELATED UI AUTOMATION</p><h2>The other automated suites.</h2><p>Recent recorded workflow results are listed below; use the run logs to inspect exact scenarios and evidence.</p></div>
+<div class="evidence-list">
+<a class="evidence" href="https://github.com/sraagul99/playwright-ui-automation/actions/runs/38159712112" target="_blank" rel="noreferrer"><div><span>Playwright / TypeScript</span><small>11 tests passed in the recorded run on 11 Oct 2026</small></div><strong class="text-link">Open run ↗</strong></a>
+<a class="evidence" href="https://github.com/sraagul99/cypress-bdd-cucumber-typescript/actions/runs/38160640406" target="_blank" rel="noreferrer"><div><span>Cypress + Cucumber BDD</span><small>12 scenarios passed in the recorded run on 11 Oct 2026</small></div><strong class="text-link">Open run ↗</strong></a>
+</div>
+<p class="footnote">All three projects use public demo environments. Results represent particular runs and can change as the demos, credentials, network, or repository configuration change.</p>
+</section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><span>RAAGUL SIVANATHAN · QUALITY ASSURANCE ENGINEER</span><a class="back" href="index.html#work">Return to selected projects ↑</a></div></footer>
+</body>
+</html>
