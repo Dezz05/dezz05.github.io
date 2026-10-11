@@ -2,7 +2,7 @@
 
 A responsive personal portfolio for **Raagul Sivanathan, Quality Assurance Engineer**. The site is built with plain HTML, CSS, and JavaScript, with no framework, package installation, or build step.
 
-**Live-site URL:** https://sraagul99.github.io/  
+**GitHub Pages URL:** https://sraagul99.github.io/ (available after Pages publishing is enabled)  
 **GitHub profile:** https://github.com/sraagul99  
 **LinkedIn:** https://www.linkedin.com/in/sraagul
 
@@ -16,7 +16,7 @@ A responsive personal portfolio for **Raagul Sivanathan, Quality Assurance Engin
   - [Postman + Newman API Testing](https://github.com/sraagul99/postman-newman-api-testing)
 - Links to each repository's GitHub Actions workflow runs and current workflow badge
 - Testing philosophy, education, LambdaTest Test Automation Professional certificate, and grouped technical toolkit
-- Email, LinkedIn, and GitHub contact paths
+- Downloadable public-edition resume PDF, plus email, LinkedIn, and GitHub contact paths
 
 ## Design and implementation
 
@@ -36,7 +36,7 @@ This repository is named `sraagul99.github.io`, so it is intended to publish as 
 3. Select branch **main** and folder **/(root)**, then save.
 4. Wait for GitHub Pages to finish deploying. Confirm the status and published URL in the Pages settings.
 
-The site is self-contained in `index.html`, with `favicon.svg`, `robots.txt`, and `sitemap.xml` as supporting assets. The `.nojekyll` file disables Jekyll processing.
+The homepage is self-contained in `index.html`. Supporting files include `favicon.svg`, `robots.txt`, `sitemap.xml`, and `assets/Raagul-Sivanathan-Resume.pdf`. The `.nojekyll` file disables Jekyll processing.
 
 ## Editing the portfolio
 
