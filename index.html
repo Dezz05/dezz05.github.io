@@ -97,13 +97,33 @@
 .contact-email a{color:#e1edf9;border-bottom:1px solid var(--line2)}
 @media(max-width:760px){.education-grid{grid-template-columns:1fr}.education-entry{padding:19px}}
 
+
+/* Recruiter-friendly education list and simpler identity/contact treatment */
+.brand-mark{position:relative;display:grid;place-items:center;width:39px;height:39px;border-radius:10px;border:1px solid rgba(121,195,255,.38);background:linear-gradient(145deg,rgba(121,195,255,.13),rgba(116,240,228,.035));box-shadow:inset 0 1px 0 rgba(255,255,255,.04);letter-spacing:0}
+.brand-mark b{font-size:17px;font-weight:850;line-height:1;color:#dff1ff;letter-spacing:-.07em}
+.brand-mark i{position:absolute;right:7px;bottom:7px;width:5px;height:5px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px rgba(116,240,228,.38)}
+.education-grid{display:block}
+.education-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.education-row{display:grid;grid-template-columns:130px minmax(0,1fr) 110px;gap:22px;align-items:center;padding:22px 18px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.012);transition:background .2s}
+.education-row:hover{background:rgba(121,195,255,.035)}
+.education-date{color:var(--blue);font:10px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.04em;white-space:nowrap}
+.education-detail{min-width:0}
+.education-detail h3{margin:0 0 5px;font-size:14px;line-height:1.5;letter-spacing:-.02em}
+.education-detail p{margin:0;color:var(--muted);font-size:11px;line-height:1.75}
+.education-detail a{display:inline-block;margin-top:8px;color:var(--blue);font-size:10px;font-weight:750}
+.education-kind{justify-self:end;color:var(--dim);font:8px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.1em;text-align:right}
+.contact-layout{grid-template-columns:minmax(0,1fr) 270px}
+.contact-actions{display:grid;gap:10px}
+.contact-actions .btn{width:100%;justify-content:space-between;min-height:48px;padding-inline:18px}
+@media(max-width:760px){.education-row{grid-template-columns:1fr auto;gap:8px 12px;padding:18px 6px}.education-date{grid-column:1}.education-detail{grid-column:1 / -1;grid-row:2}.education-kind{grid-column:2;grid-row:1}.education-detail h3{font-size:13px}.contact-layout{grid-template-columns:1fr}.contact-actions{max-width:360px;width:100%}}
+
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
 <div class="wrap header-inner">
-<a class="brand" href="#top" aria-label="Raagul Sivanathan home"><span class="brand-mark">R<i>.</i></span><span class="brand-text"><strong>RAAGUL SIVANATHAN</strong><small>QUALITY ENGINEERING</small></span></a>
+<a class="brand" href="#top" aria-label="Raagul Sivanathan home"><span class="brand-mark" aria-hidden="true"><b>R</b><i></i></span><span class="brand-text"><strong>RAAGUL SIVANATHAN</strong><small>QUALITY ENGINEERING</small></span></a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">☰</button>
 <nav class="nav" id="primary-nav" aria-label="Main navigation"><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#toolkit">Toolkit</a><a class="nav-contact" href="#contact">Contact ↗</a></nav>
 </div>
@@ -114,7 +134,7 @@
 <p class="overline"><span class="pulse"></span> MANUAL QA · AUTOMATION · API VALIDATION</p>
 <h1>Quality is<br><span class="accent">engineered,</span><br>not assumed.</h1>
 <p class="hero-lede">I’m <strong>Raagul Sivanathan</strong> — a Quality Assurance Engineer with <strong>3+ years of experience</strong> across manual and automation testing. I combine risk-aware test design, practical automation, and clear defect analysis to help teams understand what works, what breaks, and what matters before release.</p>
-<div class="hero-actions"><a class="btn btn-primary" href="#work">Explore selected work <span>↘</span></a><a class="btn btn-secondary" href="assets/Raagul-Sivanathan-Resume.pdf" download>Download resume <span>↓</span></a></div>
+<div class="hero-actions"><a class="btn btn-primary" href="#work">Explore selected work <span>↘</span></a><a class="btn btn-secondary" href="assets/Raagul-Sivanathan-Resume.pdf" download>Download CV <span>↓</span></a></div>
 <div class="availability"><span class="pulse"></span><span>Open to QA opportunities</span></div>
 </div>
 <div class="hero-console" aria-label="Quality engineering focus panel">
@@ -130,7 +150,7 @@
 </section>
 <div class="metric-strip"><div class="wrap metrics"><div class="metric"><strong>3<em>+</em></strong><span>Years in QA</span></div><div class="metric"><strong>5</strong><span>Web projects tested</span></div><div class="metric"><strong>100<em>+</em></strong><span>Automated test cases</span></div><div class="metric"><strong>3</strong><span>Public QA repositories</span></div></div></div>
 <section class="wrap section" id="work">
-<div class="section-head"><div><p class="section-kicker">01 / SELECTED WORK</p><h2>Built to be inspected.</h2></div><p class="section-intro">Public portfolio projects that show how I structure tests, validate behaviour, and make repeatable checks part of the development workflow.</p></div>
+<div class="section-head"><div><p class="section-kicker">01 / SELECTED WORK</p><h2>Built to be inspected.</h2></div></div>
 <div class="projects-grid">
 <article class="project featured">
 <div class="project-head"><span class="project-symbol">PW</span><span><span class="project-category">UI AUTOMATION / 01</span><span class="project-name-small">OrangeHRM public demo</span></span><a class="project-arrow" href="https://github.com/sraagul99/playwright-ui-automation" target="_blank" rel="noreferrer" aria-label="Open Playwright UI automation repository">↗</a></div>
@@ -197,15 +217,15 @@
 </section>
 <section class="surface-section" id="education"><div class="wrap section">
 <div class="section-head"><div><p class="section-kicker">03 / EDUCATION</p><h2>Education & certification.</h2></div></div>
-<div class="education-grid">
-<article class="education-card education-entry"><p class="section-kicker">DEGREE</p><h3>BEng (Hons) in Software Engineering</h3><p>Informatics Institute of Technology (IIT), affiliated with the University of Westminster</p><span class="education-period">2020 — 2024</span></article>
-<article class="education-card education-entry"><p class="section-kicker">FOUNDATION</p><h3>Foundation Certificate in Higher Education</h3><p>Informatics Institute of Technology (IIT)</p><span class="education-period">2019 — 2020</span></article>
-<article class="education-card education-entry"><p class="section-kicker">DIPLOMA</p><h3>Diploma in Information Technology (DITEC)</h3><p>ESOFT Metro Campus</p><span class="education-period">2018 — 2019</span></article>
-<article class="education-card education-entry education-cert"><p class="section-kicker">CERTIFICATION</p><span class="cert-icon">✦</span><h3>LambdaTest Test Automation Professional</h3><p>Issued Sep 2024</p><a href="https://www.linkedin.com/in/sraagul" target="_blank" rel="noreferrer">View LinkedIn profile ↗</a></article>
-</div>
+<ul class="education-list">
+<li class="education-row"><div class="education-date">2020 — 2024</div><div class="education-detail"><h3>Bachelor of Engineering (Hons) in Software Engineering</h3><p>Informatics Institute of Technology (IIT), affiliated with the University of Westminster</p></div><span class="education-kind">DEGREE</span></li>
+<li class="education-row"><div class="education-date">2019 — 2020</div><div class="education-detail"><h3>Foundation Certificate in Higher Education</h3><p>Informatics Institute of Technology (IIT)</p></div><span class="education-kind">FOUNDATION</span></li>
+<li class="education-row"><div class="education-date">2018 — 2019</div><div class="education-detail"><h3>Diploma in Information Technology (DITEC)</h3><p>ESOFT Metro Campus</p></div><span class="education-kind">DIPLOMA</span></li>
+<li class="education-row certification-row"><div class="education-date">SEP 2024</div><div class="education-detail"><h3>LambdaTest Test Automation Professional</h3><p>Professional certification</p><a href="https://www.linkedin.com/in/sraagul" target="_blank" rel="noreferrer">View LinkedIn profile ↗</a></div><span class="education-kind">CERTIFICATION</span></li>
+</ul>
 </div></section>
 <section class="surface-section" id="toolkit"><div class="wrap section">
-<div class="section-head"><div><p class="section-kicker">04 / TECHNICAL TOOLKIT</p><h2>The tools behind the thinking.</h2></div><p class="section-intro">A balance of established QA practices and hands-on automation tooling. Playwright and Postman/Newman are represented in my public portfolio projects.</p></div>
+<div class="section-head"><div><p class="section-kicker">04 / TECHNICAL TOOLKIT</p><h2>The tools behind the thinking.</h2></div></div>
 <div class="skills-grid">
 <div class="skill-card"><h3><span>01</span> QA & test design</h3><div class="skill-tags"><span>Manual testing</span><span>Functional</span><span>Integration testing</span><span>Regression</span><span>Smoke testing</span><span>Ad-hoc testing</span><span>Black-box testing</span><span>Risk-based testing</span><span>Test planning</span><span>Test case design</span><span>Test execution & reporting</span><span>Defect lifecycle</span><span>Test documentation</span><span>Root-cause investigation</span><span>Release validation</span></div></div>
 <div class="skill-card"><h3><span>02</span> Automation & BDD</h3><div class="skill-tags"><span>Cypress</span><span>Cucumber / Gherkin</span><span>Playwright</span><span>TypeScript</span><span>JavaScript</span><span>Page Object Model</span><span>GitHub Actions</span></div></div>
@@ -215,8 +235,14 @@
 </div></section>
 <section class="contact-section" id="contact"><div class="wrap contact-layout">
 <div><p class="overline"><span class="pulse"></span> LET’S TALK QUALITY</p><h2>Ready to contribute to <span class="accent">stronger QA outcomes?</span></h2><p class="contact-copy">Open to QA opportunities across manual testing, automation, API validation, and release quality.</p>
-<p class="contact-email">Mobile <a href="tel:+94765394746">+94 76 539 4746</a></p></div>
-<div class="contact-actions"><a class="btn btn-primary" href="mailto:raagul.s@outlook.com?subject=QA%20Opportunity%20-%20Raagul%20Sivanathan">Email me <span>↗</span></a><a class="btn btn-secondary" href="https://www.linkedin.com/in/sraagul" target="_blank" rel="noreferrer">Connect on LinkedIn <span>↗</span></a><a class="btn btn-secondary" href="https://github.com/sraagul99" target="_blank" rel="noreferrer">Explore GitHub <span>↗</span></a></div>
+</div>
+<div class="contact-actions">
+<a class="btn btn-primary" href="mailto:raagul.s@outlook.com?subject=QA%20Opportunity%20-%20Raagul%20Sivanathan">Email me <span>↗</span></a>
+<a class="btn btn-secondary" href="tel:+94765394746">Call +94 76 539 4746 <span>↗</span></a>
+<a class="btn btn-secondary" href="assets/Raagul-Sivanathan-Resume.pdf" download>Download CV <span>↓</span></a>
+<a class="btn btn-secondary" href="https://www.linkedin.com/in/sraagul" target="_blank" rel="noreferrer">Connect on LinkedIn <span>↗</span></a>
+<a class="btn btn-secondary" href="https://github.com/sraagul99" target="_blank" rel="noreferrer">Explore GitHub <span>↗</span></a>
+</div>
 </div></section>
 </main>
 <footer class="footer"><div class="wrap footer-inner"><a class="footer-brand" href="#top">RAAGUL SIVANATHAN<i>.</i></a><p>Built with intent. Tested with evidence.</p><div class="footer-links"><a href="https://www.linkedin.com/in/sraagul" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/sraagul99" target="_blank" rel="noreferrer">GitHub ↗</a></div><span class="footer-year">© <span id="year">2026</span></span></div></footer>
