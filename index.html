@@ -80,6 +80,7 @@
 .accomplishment-points b{color:#e0e9f6;font-weight:750}
 @media(max-width:560px){.accomplishment-points{gap:10px}.accomplishment-points li{padding-left:16px}}
 
+.console-foot-simple{padding-top:13px;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
@@ -88,7 +89,7 @@
 <div class="wrap header-inner">
 <a class="brand" href="#top" aria-label="Raagul Sivanathan home"><span class="brand-mark">R<i>.</i></span><span class="brand-text"><strong>RAAGUL SIVANATHAN</strong><small>QUALITY ENGINEERING</small></span></a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">☰</button>
-<nav class="nav" id="primary-nav" aria-label="Main navigation"><a href="#work">Selected work</a><a href="#approach">My approach</a><a href="#experience">Experience</a><a href="#toolkit">Toolkit</a><a class="nav-contact" href="#contact">Contact ↗</a></nav>
+<nav class="nav" id="primary-nav" aria-label="Main navigation"><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#toolkit">Toolkit</a><a class="nav-contact" href="#contact">Contact ↗</a></nav>
 </div>
 </header>
 <main id="main">
@@ -98,7 +99,7 @@
 <h1>Quality is<br><span class="accent">engineered,</span><br>not assumed.</h1>
 <p class="hero-lede">I’m <strong>Raagul Sivanathan</strong> — a Quality Assurance Engineer with <strong>3+ years of experience</strong> across manual and automation testing. I combine risk-aware test design, practical automation, and clear defect analysis to help teams understand what works, what breaks, and what matters before release.</p>
 <div class="hero-actions"><a class="btn btn-primary" href="#work">Explore selected work <span>↘</span></a><a class="btn btn-secondary" href="assets/Raagul-Sivanathan-Resume.pdf" download>Download resume <span>↓</span></a></div>
-<div class="availability"><span class="pulse"></span><span>Open to connecting with QA teams and engineering professionals</span></div>
+<div class="availability"><span class="pulse"></span><span>Open to QA opportunities</span></div>
 </div>
 <div class="hero-console" aria-label="Quality engineering focus panel">
 <div class="console-top"><span>QUALITY_SIGNAL / PORTFOLIO</span><span class="console-status"><i class="pulse"></i> SYSTEMATIC BY DESIGN</span></div>
@@ -108,7 +109,7 @@
 <div class="signal"><span class="signal-icon">02</span><span class="signal-copy"><b>Design coverage</b><small>Risk-based scenarios · test data</small></span><span class="signal-value blue">DESIGN</span></div>
 <div class="signal"><span class="signal-icon">03</span><span class="signal-copy"><b>Validate with evidence</b><small>UI · API · regression · CI</small></span><span class="signal-value">VERIFY</span></div>
 </div>
-<div class="console-chart"><div class="chart-labels"><span>QUALITY SIGNAL</span><span>TEST · ANALYSE · IMPROVE</span></div><div class="chart" aria-hidden="true"><i style="--h:25%"></i><i style="--h:43%"></i><i style="--h:35%"></i><i style="--h:57%"></i><i style="--h:48%"></i><i style="--h:72%"></i><i style="--h:61%"></i><i style="--h:86%"></i><i style="--h:70%"></i><i style="--h:95%"></i><i style="--h:81%"></i><i style="--h:100%"></i><i style="--h:78%"></i><i style="--h:91%"></i><i style="--h:99%"></i><i style="--h:87%"></i><i style="--h:100%"></i><i style="--h:93%"></i></div><div class="console-foot"><span>THINK CRITICALLY</span><span>TEST INTENTIONALLY</span><span>RELEASE CONFIDENTLY</span></div></div>
+<div class="console-foot console-foot-simple"><span>TEST WITH INTENT</span><span>VALIDATE WITH EVIDENCE</span><span>REPORT CLEARLY</span></div>
 </div>
 </section>
 <div class="metric-strip"><div class="wrap metrics"><div class="metric"><strong>3<em>+</em></strong><span>Years in QA</span></div><div class="metric"><strong>5</strong><span>Web projects tested</span></div><div class="metric"><strong>100<em>+</em></strong><span>Automated test cases</span></div><div class="metric"><strong>3</strong><span>Public QA repositories</span></div></div></div>
@@ -121,7 +122,7 @@
 <p class="project-summary">A TypeScript end-to-end framework built with Playwright Test and the Page Object Model. It focuses on clear browser behaviour checks, reusable page abstractions, and useful diagnostics when a test fails.</p>
 <ul class="project-points"><li>Authentication, required-field validation, navigation, and employee-management flows</li><li>Page objects, isolated tests, web-first assertions, and configurable environments</li><li>GitHub Actions execution with reports and failure evidence where available</li></ul>
 <div class="project-tags"><span>Playwright</span><span>TypeScript</span><span>Page Object Model</span><span>GitHub Actions</span></div>
-<div class="project-links"><a href="https://github.com/sraagul99/playwright-ui-automation" target="_blank" rel="noreferrer">Repository <span>↗</span></a><a href="https://github.com/sraagul99/playwright-ui-automation/actions" target="_blank" rel="noreferrer">Workflow runs <span>↗</span></a></div>
+<div class="project-links"><a href="https://github.com/sraagul99/playwright-ui-automation" target="_blank" rel="noreferrer">Repository <span>↗</span></a></div>
 <div class="ci-box"><span class="ci-label">CONTINUOUS INTEGRATION</span><a href="https://github.com/sraagul99/playwright-ui-automation/actions" target="_blank" rel="noreferrer"><img src="https://github.com/sraagul99/playwright-ui-automation/actions/workflows/playwright.yml/badge.svg?branch=main" alt="Playwright workflow status"></a><p>TypeScript checks and Chromium-based end-to-end tests run through GitHub Actions. Review the run logs for the latest result and evidence.</p><a class="ci-link" href="https://github.com/sraagul99/playwright-ui-automation/actions" target="_blank" rel="noreferrer">Inspect CI evidence ↗</a></div>
 </article>
 <article class="project">
@@ -130,8 +131,8 @@
 <p class="project-summary">A behaviour-driven test suite that pairs readable Gherkin scenarios with reusable TypeScript step definitions and page objects. The repository also contains a manual test pack for broader scenario coverage.</p>
 <ul class="project-points"><li>Authentication and PIM employee-management scenarios</li><li>Core navigation flows and reusable step definitions</li><li>Manual test plan with 38 test cases and CI reporting</li></ul>
 <div class="project-tags"><span>Cypress</span><span>Cucumber</span><span>Gherkin</span><span>TypeScript</span></div>
-<div class="project-links"><a href="https://github.com/sraagul99/cypress-bdd-cucumber-typescript" target="_blank" rel="noreferrer">Repository <span>↗</span></a><a href="https://github.com/sraagul99/cypress-bdd-cucumber-typescript/actions" target="_blank" rel="noreferrer">Workflow runs <span>↗</span></a></div>
-<div class="ci-box"><span class="ci-label">CONTINUOUS INTEGRATION</span><a href="https://github.com/sraagul99/cypress-bdd-cucumber-typescript/actions" target="_blank" rel="noreferrer"><img src="https://github.com/sraagul99/cypress-bdd-cucumber-typescript/actions/workflows/cypress.yml/badge.svg?branch=main" alt="Cypress BDD workflow status"></a><p>Gherkin scenarios run in CI. The repository documentation distinguishes passed checks from credential-dependent pending scenarios.</p><a class="ci-link" href="https://github.com/sraagul99/cypress-bdd-cucumber-typescript/actions" target="_blank" rel="noreferrer">Inspect CI evidence ↗</a></div>
+<div class="project-links"><a href="https://github.com/sraagul99/cypress-bdd-cucumber-typescript" target="_blank" rel="noreferrer">Repository <span>↗</span></a></div>
+<div class="ci-box"><span class="ci-label">CONTINUOUS INTEGRATION</span><a href="https://github.com/sraagul99/cypress-bdd-cucumber-typescript/actions" target="_blank" rel="noreferrer"><img src="https://github.com/sraagul99/cypress-bdd-cucumber-typescript/actions/workflows/cypress.yml/badge.svg?branch=main" alt="Cypress BDD workflow status"></a><p>Gherkin scenarios run in CI, with workflow logs available for detailed results.</p><a class="ci-link" href="https://github.com/sraagul99/cypress-bdd-cucumber-typescript/actions" target="_blank" rel="noreferrer">Inspect CI evidence ↗</a></div>
 </article>
 <article class="project">
 <div class="project-head"><span class="project-symbol">API</span><span><span class="project-category">API VALIDATION / 03</span><span class="project-name-small">JSONPlaceholder demo API</span></span><a class="project-arrow" href="https://github.com/sraagul99/postman-newman-api-testing" target="_blank" rel="noreferrer" aria-label="Open Postman Newman API repository">↗</a></div>
@@ -139,24 +140,13 @@
 <p class="project-summary">A REST API collection with JavaScript assertions and Newman command-line execution. The project focuses on observable response contracts and repeatable validation—not just sending requests.</p>
 <ul class="project-points"><li>GET, POST, PUT, DELETE, and negative-resource scenarios</li><li>Status, headers, required fields, data types, values, and response-time checks</li><li>Environment-driven test data, JUnit output, and GitHub Actions</li></ul>
 <div class="project-tags"><span>Postman</span><span>Newman</span><span>REST API</span><span>JavaScript</span></div>
-<div class="project-links"><a href="https://github.com/sraagul99/postman-newman-api-testing" target="_blank" rel="noreferrer">Repository <span>↗</span></a><a href="https://github.com/sraagul99/postman-newman-api-testing/actions" target="_blank" rel="noreferrer">Workflow runs <span>↗</span></a></div>
+<div class="project-links"><a href="https://github.com/sraagul99/postman-newman-api-testing" target="_blank" rel="noreferrer">Repository <span>↗</span></a></div>
 <div class="ci-box"><span class="ci-label">CONTINUOUS INTEGRATION</span><a href="https://github.com/sraagul99/postman-newman-api-testing/actions" target="_blank" rel="noreferrer"><img src="https://github.com/sraagul99/postman-newman-api-testing/actions/workflows/api-tests.yml/badge.svg?branch=main" alt="API test workflow status"></a><p>CI validates Postman exports and executes the collection with Newman. Write operations against JSONPlaceholder are simulated rather than persisted.</p><a class="ci-link" href="https://github.com/sraagul99/postman-newman-api-testing/actions" target="_blank" rel="noreferrer">Inspect CI evidence ↗</a></div>
 </article>
 </div>
-<p class="note">SCOPE NOTE — These are public portfolio projects using third-party demo services. Availability, credentials, seeded data, and live test results can change independently of the repositories. Always inspect the run details rather than inferring quality from a badge alone.</p>
 </section>
-<section class="surface-section" id="approach"><div class="wrap section">
-<div class="section-head"><div><p class="section-kicker">02 / HOW I APPROACH TESTING</p><h2>From requirement to reliable evidence.</h2></div><p class="section-intro">My job is to find out whether the software behaves as expected, where it could fail, and what the team needs to know. This is the practical process I follow.</p></div>
-<div class="testing-flow" aria-label="Four-step testing approach">
-<article class="testing-step"><span class="testing-step-no">01 / UNDERSTAND</span><h3>Define what “correct” means.</h3><p>Read the user story and acceptance criteria. Clarify unclear requirements before writing tests so expected behaviour is agreed.</p><div class="step-focus"><b>Key question</b><span>What should happen for the user?</span></div></article>
-<article class="testing-step"><span class="testing-step-no">02 / EXPLORE RISK</span><h3>Look beyond the happy path.</h3><p>Check invalid inputs, boundary values, permissions, empty states, error handling, and the parts of the product that a change could affect.</p><div class="step-focus"><b>Key question</b><span>How could this break?</span></div></article>
-<article class="testing-step"><span class="testing-step-no">03 / VALIDATE</span><h3>Choose the right test layer.</h3><p>Explore manually to discover unexpected behaviour, validate API rules and responses directly, and automate stable, high-value regression checks.</p><div class="step-focus"><b>Key question</b><span>What is the most useful check?</span></div></article>
-<article class="testing-step"><span class="testing-step-no">04 / REPORT & RETEST</span><h3>Make the result actionable.</h3><p>Share reproducible steps, expected versus actual results, evidence, and impact. Retest fixes and check nearby behaviour for regressions.</p><div class="step-focus"><b>Key question</b><span>Can the team reproduce and resolve it?</span></div></article>
-</div>
-<div class="testing-example"><div><p class="section-kicker">EXAMPLE IN PRACTICE</p><h3>Testing an API-backed form</h3></div><p>I would check a valid submission, missing or invalid values, the API response, and the message shown to the user. After a fix, I would retest the defect and related flows. Stable repeatable checks are good automation candidates; exploratory testing helps uncover behaviours we did not anticipate.</p></div>
-</div></section>
 <section class="wrap section" id="experience">
-<div class="section-head"><div><p class="section-kicker">03 / EXPERIENCE & EDUCATION</p><h2>Experience across manual QA and automation.</h2></div><p class="section-intro">My CV records two QA roles, supported by formal Software Engineering and IT education. The roles below are shown separately with the dates and responsibilities from the latest CV.</p></div>
+<div class="section-head"><div><p class="section-kicker">02 / EXPERIENCE & EDUCATION</p><h2>Experience across manual QA and automation.</h2></div><p class="section-intro">My CV records two QA roles, supported by formal Software Engineering and IT education. The roles below are shown separately with the dates and responsibilities from the latest CV.</p></div>
 <div class="experience-layout">
 <div class="work-history">
 <article class="experience-card">
@@ -192,12 +182,11 @@
 <div class="education-item"><h4>Foundation Certificate in Higher Education</h4><p>Informatics Institute of Technology (IIT)</p><span>2019 — 2020</span></div>
 <div class="education-item"><h4>Diploma in Information Technology (DITEC)</h4><p>ESOFT Metro Campus</p><span>2018 — 2019</span></div>
 <div class="cert-card"><span class="cert-icon">✦</span><div><b>LambdaTest Test Automation Professional</b><small>Issued Sep 2024 · <a href="https://www.linkedin.com/in/sraagul" target="_blank" rel="noreferrer">View LinkedIn profile ↗</a></small></div></div>
-<div class="academic-projects"><p class="section-kicker">ACADEMIC PROJECTS</p><div><b>Web Development Quiz App</b><span>Responsive web quiz application · 2024</span></div><div><b>SugarD</b><span>Diabetes management app for glucose tracking and health insights · 2023–2024</span></div><div><b>CropVisor</b><span>Agriculture management tool for crop health and yield · 2021–2022</span></div></div>
 </aside>
 </div>
 </section>
 <section class="surface-section" id="toolkit"><div class="wrap section">
-<div class="section-head"><div><p class="section-kicker">04 / TECHNICAL TOOLKIT</p><h2>The tools behind the thinking.</h2></div><p class="section-intro">A balance of established QA practices and hands-on automation tooling. Playwright and Postman/Newman are represented in my public portfolio projects.</p></div>
+<div class="section-head"><div><p class="section-kicker">03 / TECHNICAL TOOLKIT</p><h2>The tools behind the thinking.</h2></div><p class="section-intro">A balance of established QA practices and hands-on automation tooling. Playwright and Postman/Newman are represented in my public portfolio projects.</p></div>
 <div class="skills-grid">
 <div class="skill-card"><h3><span>01</span> QA & test design</h3><div class="skill-tags"><span>Manual testing</span><span>Functional</span><span>Regression</span><span>Smoke testing</span><span>Ad-hoc testing</span><span>Black-box testing</span><span>Test planning</span><span>Test case design</span><span>Test documentation</span><span>Root-cause investigation</span><span>Release validation</span></div></div>
 <div class="skill-card"><h3><span>02</span> Automation & BDD</h3><div class="skill-tags"><span>Cypress</span><span>Cucumber / Gherkin</span><span>Playwright</span><span>TypeScript</span><span>JavaScript</span><span>Page Object Model</span><span>GitHub Actions</span></div></div>
@@ -206,7 +195,7 @@
 </div>
 </div></section>
 <section class="contact-section" id="contact"><div class="wrap contact-layout">
-<div><p class="overline"><span class="pulse"></span> LET’S TALK QUALITY</p><h2>Looking for someone who asks <span class="accent">the next right question?</span></h2><p class="contact-copy">I’m keen to connect with teams that value thoughtful test design, maintainable automation, transparent QA reporting, and continuous improvement.</p><p class="contact-email">Email <a href="mailto:raagul.s@outlook.com">raagul.s@outlook.com</a></p></div>
+<div><p class="overline"><span class="pulse"></span> LET’S TALK QUALITY</p><h2>Ready to contribute to <span class="accent">stronger QA outcomes?</span></h2><p class="contact-copy">Open to QA opportunities across manual testing, automation, API validation, and release quality.</p></div>
 <div class="contact-actions"><a class="btn btn-primary" href="mailto:raagul.s@outlook.com?subject=QA%20Opportunity%20-%20Raagul%20Sivanathan">Email me <span>↗</span></a><a class="btn btn-secondary" href="assets/Raagul-Sivanathan-Resume.pdf" download>Download resume <span>↓</span></a><a class="btn btn-secondary" href="https://www.linkedin.com/in/sraagul" target="_blank" rel="noreferrer">Connect on LinkedIn <span>↗</span></a><a class="btn btn-secondary" href="https://github.com/sraagul99" target="_blank" rel="noreferrer">Explore GitHub <span>↗</span></a></div>
 </div></section>
 </main>
