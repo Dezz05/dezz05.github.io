@@ -42,7 +42,7 @@ These are specific recorded runs against public demo environments; they are not 
 
 This repository is named `sraagul99.github.io` and is intended to publish as a user site. In **Settings → Pages**, select **Deploy from a branch**, branch **main**, folder **/(root)**, and save.
 
-The homepage is `index.html`. Supporting files include `favicon.svg`, `robots.txt`, `sitemap.xml`, and `assets/Raagul-Sivanathan-Resume.pdf`. The `.nojekyll` file disables Jekyll processing.
+The homepage is `index.html`. Supporting files include `favicon.svg`, `robots.txt`, and `sitemap.xml`. An optional CV asset may remain in the repository, but the portfolio intentionally has no CV download button. The `.nojekyll` file disables Jekyll processing.
 
 ## Maintenance
 
