@@ -26,6 +26,39 @@
 .skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.skill-card{padding:21px;border:1px solid var(--line);border-radius:13px;background:rgba(11,16,24,.5)}.skill-card h3{display:flex;gap:9px;align-items:center;margin:0 0 14px;font-size:11px}.skill-card h3 span{color:var(--blue);font:10px ui-monospace,SFMono-Regular,Consolas,monospace}.skill-tags{display:flex;gap:7px;flex-wrap:wrap}.skill-tags span{padding:6px 8px;border:1px solid var(--line);border-radius:6px;color:#c1cedf;background:rgba(255,255,255,.015);font-size:9px}
 .contact-section{position:relative;overflow:hidden;padding-block:80px;border-top:1px solid var(--line);background:radial-gradient(ellipse at 8% 40%,rgba(51,125,195,.15),transparent 37%),radial-gradient(ellipse at 98% 10%,rgba(255,113,136,.07),transparent 30%),#0a0e15}.contact-section:after{content:"";position:absolute;right:-105px;bottom:-200px;width:340px;height:340px;border:1px solid rgba(121,195,255,.08);border-radius:50%;box-shadow:0 0 0 34px rgba(121,195,255,.018),0 0 0 68px rgba(121,195,255,.012);pointer-events:none}.contact-layout{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) 245px;align-items:center;gap:45px}.contact h2{max-width:710px}.contact-copy{max-width:580px;margin:17px 0 0;color:var(--muted);font-size:12px;line-height:1.9}.contact-actions{display:grid;gap:10px}.contact-actions .btn{width:100%;justify-content:space-between}.contact-email{margin-top:16px;color:var(--muted);font-size:10px;overflow-wrap:anywhere}.contact-email a{border-bottom:1px solid var(--line2)}.footer{border-top:1px solid var(--line);background:#07090e}.footer-inner{min-height:77px;display:flex;align-items:center;gap:20px}.footer-brand{font-size:9px;font-weight:850;letter-spacing:.12em}.footer-brand i{font-style:normal;color:var(--blue)}.footer p{margin:0;color:var(--dim);font-size:9px}.footer-links{display:flex;gap:16px;margin-left:auto}.footer-links a,.footer-year{color:var(--muted);font-size:9px}.footer-links a:hover{color:var(--blue)}
 @media(min-width:1450px){.hero{padding-top:105px;padding-bottom:76px}}@media(max-width:980px){.hero{gap:34px;grid-template-columns:minmax(0,1fr) minmax(330px,.9fr);padding-top:75px}.hero h1{font-size:clamp(43px,5.5vw,62px)}.section{padding-block:78px}.metric{padding-inline:18px}.project.featured{column-gap:18px}.experience-layout{grid-template-columns:1fr 1fr}.skills-grid{grid-template-columns:1fr 1fr}}@media(max-width:760px){html{scroll-padding-top:78px}.wrap{width:min(var(--max),calc(100% - 36px))}.header-inner{height:69px}.brand-text strong{font-size:9px}.brand-text small{font-size:8px}.menu-toggle{display:grid;place-items:center}.nav{display:none;position:absolute;top:61px;left:18px;right:18px;padding:10px;flex-direction:column;align-items:stretch;gap:2px;border:1px solid var(--line2);border-radius:13px;background:#0d141f;box-shadow:0 18px 46px rgba(0,0,0,.45)}.nav.open{display:flex}.nav a{padding:11px 12px;border-radius:7px}.nav .nav-contact{margin-top:5px}.hero{display:flex;flex-direction:column;align-items:stretch;gap:34px;padding-block:61px 46px}.hero h1{font-size:clamp(43px,10.2vw,61px)}.hero-lede{font-size:13px}.hero-console{padding:16px}.metrics{grid-template-columns:1fr 1fr;row-gap:16px;padding-block:16px}.metric{padding:7px 15px}.metric:nth-child(odd){border-left:0;padding-left:0}.metric strong{font-size:24px}.metric span{font-size:8px}.section{padding-block:70px}.section-head{align-items:flex-start;flex-direction:column;gap:15px;margin-bottom:26px}.section-head h2,.contact h2{font-size:37px}.section-intro{font-size:11px}.projects-grid{grid-template-columns:1fr}.project.featured{grid-column:auto;display:flex;padding:22px}.project.featured .ci-box{display:flex;grid-column:auto;grid-row:auto}.project h3{font-size:20px}.project .ci-box{margin-top:18px}.ci-box{min-height:118px}.principles{grid-template-columns:1fr}.principle{min-height:0}.principle h3{margin-top:16px}.experience-layout{grid-template-columns:1fr}.experience-card,.education-card{padding:20px}.skills-grid{grid-template-columns:1fr}.contact-section{padding-block:65px}.contact-layout{grid-template-columns:1fr;gap:24px}.contact-actions{max-width:330px}.footer-inner{min-height:92px;flex-wrap:wrap;gap:10px 18px;padding-block:16px}.footer-brand{width:100%}.footer p{order:3;width:100%}.footer-links{margin-left:0}.footer-year{margin-left:auto}}@media(max-width:390px){.wrap{width:calc(100% - 28px)}.hero h1{font-size:42px}.hero-actions{align-items:stretch;flex-direction:column}.hero-actions .btn{justify-content:space-between}.console-heading h2{font-size:18px}.signal{grid-template-columns:32px minmax(0,1fr) auto;gap:8px;padding:9px}.signal-copy b{font-size:9px}.signal-copy small{font-size:8px}.signal-value{font-size:8px}.project{padding:19px}.console-foot{font-size:7px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Clearer, evidence-led testing philosophy and CV-aligned experience sections */
+.testing-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.testing-step{display:flex;flex-direction:column;min-height:246px;padding:21px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,rgba(18,27,39,.88),rgba(10,15,22,.78))}
+.testing-step-no{font:9px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--blue);letter-spacing:.1em}
+.testing-step h3{margin:22px 0 9px;font-size:15px;line-height:1.4;letter-spacing:-.025em}
+.testing-step p{margin:0;color:var(--muted);font-size:10px;line-height:1.85}
+.step-focus{display:grid;gap:4px;margin-top:auto;padding-top:17px}
+.step-focus b{font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:var(--dim)}
+.step-focus span{font-size:10px;color:#dfe8f5;font-weight:650;line-height:1.6}
+.testing-example{display:grid;grid-template-columns:minmax(200px,.55fr) minmax(0,1.45fr);gap:22px;align-items:center;margin-top:13px;padding:21px 23px;border:1px solid rgba(121,195,255,.18);border-radius:13px;background:linear-gradient(100deg,rgba(121,195,255,.055),rgba(255,255,255,.012))}
+.testing-example .section-kicker{margin-bottom:8px}.testing-example h3{font-size:14px;line-height:1.45;margin:0}.testing-example>p{margin:0;color:var(--muted);font-size:11px;line-height:1.9}
+.work-history{display:grid;gap:14px;min-width:0}
+.experience-layout{grid-template-columns:minmax(0,1.22fr) minmax(280px,.78fr);align-items:start}
+.experience-card{min-width:0;padding:22px}
+.experience-top{align-items:center}.company-copy{min-width:0;flex:1}.employment-date{align-self:flex-start;margin-left:auto;padding:6px 8px;border:1px solid var(--line);border-radius:6px;color:var(--dim);font:8px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.045em;white-space:nowrap}
+.impact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:17px}
+.impact-grid>div{display:flex;flex-direction:column;gap:4px;min-width:0;padding:12px;border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.014)}
+.impact-grid strong{font-size:17px;letter-spacing:-.04em;color:#e8f2ff}.impact-grid span{font-size:8px;line-height:1.6;color:var(--muted)}
+.experience-subheading{margin:19px 0 11px;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#dbe6f4}
+.experience-highlights{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.experience-highlights li{display:grid;grid-template-columns:3px minmax(0,1fr);gap:10px;align-items:start}
+.experience-highlights li:before{content:"";display:block;width:3px;height:100%;min-height:28px;border-radius:4px;background:linear-gradient(var(--blue),rgba(121,195,255,.12))}
+.experience-highlights b{display:block;margin:0 0 3px;color:#e0e9f6;font-size:10px;line-height:1.5}
+.experience-highlights span{display:block;color:var(--muted);font-size:10px;line-height:1.85}
+.academic-projects{display:grid;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.academic-projects .section-kicker{margin:0 0 2px}
+.academic-projects>div{display:grid;gap:2px}
+.academic-projects b{font-size:10px;color:#dbe6f4}
+.academic-projects span{font-size:9px;line-height:1.65;color:var(--muted)}
+@media(max-width:980px){.testing-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.experience-layout{grid-template-columns:1fr}}
+@media(max-width:560px){.testing-flow{grid-template-columns:1fr}.testing-step{min-height:0}.testing-step h3{margin-top:15px}.step-focus{padding-top:12px}.testing-example{grid-template-columns:1fr;gap:10px;padding:18px}.experience-card{padding:17px}.experience-top{flex-wrap:wrap;align-items:flex-start}.employment-date{margin-left:56px;margin-top:-6px}.impact-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.impact-grid>div{padding:9px}.impact-grid strong{font-size:15px}.impact-grid span{font-size:7px}}
+
 </style>
 </head>
 <body>
@@ -92,23 +125,42 @@
 <p class="note">SCOPE NOTE — These are public portfolio projects using third-party demo services. Availability, credentials, seeded data, and live test results can change independently of the repositories. Always inspect the run details rather than inferring quality from a badge alone.</p>
 </section>
 <section class="surface-section" id="approach"><div class="wrap section">
-<div class="section-head"><div><p class="section-kicker">02 / TESTING PHILOSOPHY</p><h2>What I check. Why it matters.</h2></div><p class="section-intro">I start with the risk, choose the most useful way to test it, and make the result easy for the team to act on. Here is what that looks like in practice.</p></div>
-<div class="principles">
-<article class="principle"><div class="principle-top"><span>01 / UNDERSTAND</span><span class="principle-mark">⌕</span></div><h3>Start from real user behaviour</h3><p>Read the requirement, map the main journey, then challenge the expected behaviour with negative and boundary cases.</p><div class="principle-example"><b>Example</b><span>For a login form, check valid credentials, empty fields, invalid credentials, password masking, and the message shown when sign-in fails.</span></div></article>
-<article class="principle"><div class="principle-top"><span>02 / VALIDATE</span><span class="principle-mark">⟡</span></div><h3>Test at the right layer</h3><p>Use UI checks for user journeys, API tests for response contracts, and targeted regression checks for areas affected by a change.</p><div class="principle-example"><b>Example</b><span>For an API, verify status code, content type, required fields, data types, missing-resource behaviour, and whether the response matches the contract.</span></div></article>
-<article class="principle"><div class="principle-top"><span>03 / REPORT & RETEST</span><span class="principle-mark">↗</span></div><h3>Make failures actionable</h3><p>Capture reproducible steps, expected versus actual results, useful evidence, and impact. Retest the fix and check for nearby regressions.</p><div class="principle-example"><b>Example</b><span>When a defect appears, record the environment and steps, attach a screenshot or response sample, set severity based on impact, then verify the fix.</span></div></article>
+<div class="section-head"><div><p class="section-kicker">02 / HOW I APPROACH TESTING</p><h2>From requirement to reliable evidence.</h2></div><p class="section-intro">My job is to find out whether the software behaves as expected, where it could fail, and what the team needs to know. This is the practical process I follow.</p></div>
+<div class="testing-flow" aria-label="Four-step testing approach">
+<article class="testing-step"><span class="testing-step-no">01 / UNDERSTAND</span><h3>Define what “correct” means.</h3><p>Read the user story and acceptance criteria. Clarify unclear requirements before writing tests so expected behaviour is agreed.</p><div class="step-focus"><b>Key question</b><span>What should happen for the user?</span></div></article>
+<article class="testing-step"><span class="testing-step-no">02 / EXPLORE RISK</span><h3>Look beyond the happy path.</h3><p>Check invalid inputs, boundary values, permissions, empty states, error handling, and the parts of the product that a change could affect.</p><div class="step-focus"><b>Key question</b><span>How could this break?</span></div></article>
+<article class="testing-step"><span class="testing-step-no">03 / VALIDATE</span><h3>Choose the right test layer.</h3><p>Explore manually to discover unexpected behaviour, validate API rules and responses directly, and automate stable, high-value regression checks.</p><div class="step-focus"><b>Key question</b><span>What is the most useful check?</span></div></article>
+<article class="testing-step"><span class="testing-step-no">04 / REPORT & RETEST</span><h3>Make the result actionable.</h3><p>Share reproducible steps, expected versus actual results, evidence, and impact. Retest fixes and check nearby behaviour for regressions.</p><div class="step-focus"><b>Key question</b><span>Can the team reproduce and resolve it?</span></div></article>
 </div>
+<div class="testing-example"><div><p class="section-kicker">EXAMPLE IN PRACTICE</p><h3>Testing an API-backed form</h3></div><p>I would check a valid submission, missing or invalid values, the API response, and the message shown to the user. After a fix, I would retest the defect and related flows. Stable repeatable checks are good automation candidates; exploratory testing helps uncover behaviours we did not anticipate.</p></div>
 </div></section>
 <section class="wrap section" id="experience">
-<div class="section-head"><div><p class="section-kicker">03 / EXPERIENCE & EDUCATION</p><h2>Experience, grounded in the CV.</h2></div><p class="section-intro">A concise timeline of my professional QA experience and formal education, using the role titles and dates from my latest CV.</p></div>
+<div class="section-head"><div><p class="section-kicker">03 / EXPERIENCE & EDUCATION</p><h2>Experience across manual QA and automation.</h2></div><p class="section-intro">My CV records two QA roles, supported by formal Software Engineering and IT education. The roles below are shown separately with the dates and responsibilities from the latest CV.</p></div>
 <div class="experience-layout">
-<div class="experience-card">
-<div class="experience-top"><span class="company-mark">AZ</span><div><h3>Azend Technologies Pvt Ltd</h3><p>Colombo, Sri Lanka</p></div></div>
-<div class="timeline">
-<article class="timeline-item"><span class="timeline-dot"></span><div><h4>Associate Quality Assurance Engineer</h4><span class="date">Apr 2024 — Present</span><p>Designed and executed test plans, test cases, and test scripts across five web-based projects, covering manual, automation, functional, regression, smoke, API, ad-hoc, and black-box testing. Developed and maintained 100+ automated test cases using Cypress, TypeScript, and Cucumber. Also contributed to defect analysis and retesting, API and deployment validation, QA documentation, Agile collaboration, AI-assisted QA workflows, and mentoring junior QA interns.</p></div></article>
-<article class="timeline-item"><span class="timeline-dot"></span><div><h4>Quality Assurance Intern · Different</h4><span class="date">Jul 2022 — Jul 2023</span><p>Designed and executed API, functional, and ad-hoc test cases; developed and maintained Cypress automation scripts; documented and tracked defects; and collaborated with developers on issue resolution.</p></div></article>
-</div>
-<div class="career-note"><b>AI-assisted QA</b><span>Exposure to AI-assisted approaches and AI agents for test analysis, test design, defect investigation, documentation, and workflow efficiency.</span></div>
+<div class="work-history">
+<article class="experience-card">
+<div class="experience-top"><span class="company-mark">AZ</span><div class="company-copy"><h3>Azend Technologies Pvt Ltd</h3><p>Associate Quality Assurance Engineer · Colombo, Sri Lanka</p></div><span class="employment-date">APR 2024 — PRESENT</span></div>
+<div class="impact-grid" aria-label="Experience highlights"><div><strong>5</strong><span>web-based projects</span></div><div><strong>100+</strong><span>automated test cases</span></div><div><strong>End-to-end</strong><span>manual and automation QA</span></div></div>
+<h4 class="experience-subheading">Responsibilities & contributions</h4>
+<ul class="experience-highlights">
+<li><b>Test planning and execution</b><span>Designed and executed test plans, test cases, and test scripts across five web-based projects, covering manual, automation, functional, regression, smoke, API, ad-hoc, and black-box testing.</span></li>
+<li><b>Automation development</b><span>Developed and maintained 100+ automated test cases using Cypress, TypeScript, and Cucumber to improve regression coverage and reduce repetitive manual testing effort.</span></li>
+<li><b>API, regression and release validation</b><span>Performed API testing, functional validation, regression testing, and deployment validation against business and technical requirements.</span></li>
+<li><b>Defect investigation and documentation</b><span>Tracked defects through the testing lifecycle, including debugging, root-cause investigation, and retesting. Maintained test plans, test cases, defect reports, test procedures, execution results, and QA reports.</span></li>
+<li><b>Test management and collaboration</b><span>Used Jira and Azure DevOps for test management, defect tracking, execution, and reporting. Worked with developers, clients, and cross-functional stakeholders to clarify requirements, investigate issues, and communicate QA status.</span></li>
+<li><b>Continuous improvement and mentoring</b><span>Identified high-risk areas and testing gaps to support release confidence; applied AI-assisted approaches and AI agents for test analysis, test design, defect investigation, and documentation; mentored junior QA interns on test design, defect reporting, QA practices, and Agile workflows.</span></li>
+</ul>
+</article>
+<article class="experience-card">
+<div class="experience-top"><span class="company-mark">DI</span><div class="company-copy"><h3>:Different</h3><p>Quality Assurance Intern · Colombo, Sri Lanka</p></div><span class="employment-date">JUL 2022 — JUL 2023</span></div>
+<h4 class="experience-subheading">Responsibilities & contributions</h4>
+<ul class="experience-highlights">
+<li><b>Test design and execution</b><span>Designed and executed test cases based on system specifications, covering API, functional, and ad-hoc testing.</span></li>
+<li><b>Cypress automation</b><span>Developed and maintained automated test scripts using Cypress to improve testing efficiency and coverage.</span></li>
+<li><b>Defect tracking and resolution</b><span>Identified, documented, and tracked software defects while collaborating with developers to support timely resolution.</span></li>
+<li><b>Ongoing automation contribution</b><span>Contributed to weekly automation objectives by developing and maintaining new test cases.</span></li>
+</ul>
+</article>
 </div>
 <aside class="education-card">
 <p class="section-kicker">EDUCATION</p>
@@ -116,6 +168,7 @@
 <div class="education-item"><h4>Foundation Certificate in Higher Education</h4><p>Informatics Institute of Technology (IIT)</p><span>2019 — 2020</span></div>
 <div class="education-item"><h4>Diploma in Information Technology (DITEC)</h4><p>ESOFT Metro Campus</p><span>2018 — 2019</span></div>
 <div class="cert-card"><span class="cert-icon">✦</span><div><b>LambdaTest Test Automation Professional</b><small>Issued Sep 2024 · <a href="https://www.linkedin.com/in/sraagul" target="_blank" rel="noreferrer">View LinkedIn profile ↗</a></small></div></div>
+<div class="academic-projects"><p class="section-kicker">ACADEMIC PROJECTS</p><div><b>Web Development Quiz App</b><span>Responsive web quiz application · 2024</span></div><div><b>SugarD</b><span>Diabetes management app for glucose tracking and health insights · 2023–2024</span></div><div><b>CropVisor</b><span>Agriculture management tool for crop health and yield · 2021–2022</span></div></div>
 </aside>
 </div>
 </section>
