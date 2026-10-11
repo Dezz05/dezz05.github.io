@@ -125,6 +125,24 @@
 .hero-specialty{margin:17px 0 22px;color:var(--blue);font-size:10px;letter-spacing:.16em}
 .hero-name{margin-bottom:0!important}
 
+
+/* Concrete CI execution evidence and linked case study */
+.execution-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.execution-card{display:flex;flex-direction:column;min-width:0;padding:19px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(145deg,rgba(17,26,39,.94),rgba(10,15,22,.92));transition:transform .2s,border-color .2s}
+.execution-card:hover{transform:translateY(-3px);border-color:rgba(121,195,255,.38)}
+.execution-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.execution-type{font:850 8px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.1em;color:var(--blue)}
+.execution-state{display:inline-flex;align-items:center;gap:5px;font:800 8px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--green);letter-spacing:.07em}
+.execution-state i{width:5px;height:5px;border-radius:50%;background:var(--green)}
+.execution-card>strong{margin-top:23px;font-size:30px;line-height:1.1;letter-spacing:-.06em;color:#e9f4ff}
+.execution-card h3{font-size:13px;margin:7px 0}
+.execution-card p{font-size:10px;line-height:1.8;color:var(--muted);margin:0 0 18px}
+.execution-link{margin-top:auto;padding-top:13px;border-top:1px solid var(--line);color:var(--blue);font-size:10px;font-weight:800}
+.evidence-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:14px;padding:16px 18px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.012)}
+.evidence-bottom p{margin:0;color:var(--dim);font-size:10px;line-height:1.8;max-width:580px}
+.evidence-bottom .btn{flex-shrink:0}
+@media(max-width:760px){.execution-grid{grid-template-columns:1fr}.execution-card{padding:18px}.execution-card>strong{margin-top:15px}.evidence-bottom{align-items:flex-start;flex-direction:column}.evidence-bottom .btn{width:100%;justify-content:space-between}}
+
 </style>
 </head>
 <body>
@@ -133,7 +151,7 @@
 <div class="wrap header-inner">
 <a class="brand" href="#top" aria-label="Raagul Sivanathan home"><span class="brand-mark" aria-hidden="true"><b>R</b><i></i></span><span class="brand-text"><strong>RAAGUL SIVANATHAN</strong><small>QUALITY ENGINEERING</small></span></a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">☰</button>
-<nav class="nav" id="primary-nav" aria-label="Main navigation"><a href="#work">Selected work</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#toolkit">Toolkit</a><a class="nav-contact" href="#contact">Contact ↗</a></nav>
+<nav class="nav" id="primary-nav" aria-label="Main navigation"><a href="#work">Selected work</a><a href="#evidence">Test evidence</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#toolkit">Toolkit</a><a class="nav-contact" href="#contact">Contact ↗</a></nav>
 </div>
 </header>
 <main id="main">
@@ -188,8 +206,17 @@
 </article>
 </div>
 </section>
+<section class="surface-section" id="evidence"><div class="wrap section">
+<div class="section-head"><div><p class="section-kicker">02 / VERIFIED EXECUTION EVIDENCE</p><h2>Tested, executed, inspectable.</h2></div></div>
+<div class="execution-grid">
+<a class="execution-card" href="https://github.com/sraagul99/playwright-ui-automation/actions/runs/38159712112" target="_blank" rel="noreferrer"><div class="execution-top"><span class="execution-type">PLAYWRIGHT / UI</span><span class="execution-state"><i></i> SUCCESS</span></div><strong>11 / 11</strong><h3>Browser tests passed</h3><p>Authentication, field validation, employee workflow, and core navigation in the recorded Chromium run.</p><span class="execution-link">Inspect run logs ↗</span></a>
+<a class="execution-card" href="https://github.com/sraagul99/cypress-bdd-cucumber-typescript/actions/runs/38160640406" target="_blank" rel="noreferrer"><div class="execution-top"><span class="execution-type">CYPRESS / BDD</span><span class="execution-state"><i></i> SUCCESS</span></div><strong>12 / 12</strong><h3>BDD scenarios passed</h3><p>Gherkin-based navigation and employee-management coverage in the recorded CI run.</p><span class="execution-link">Inspect run logs ↗</span></a>
+<a class="execution-card" href="https://github.com/sraagul99/postman-newman-api-testing/actions/runs/38160228089" target="_blank" rel="noreferrer"><div class="execution-top"><span class="execution-type">POSTMAN / NEWMAN</span><span class="execution-state"><i></i> SUCCESS</span></div><strong>24 / 24</strong><h3>API assertions passed</h3><p>Seven requests executed, zero assertion failures, and a JUnit report generated for the recorded run.</p><span class="execution-link">Inspect run and report ↗</span></a>
+</div>
+<div class="evidence-bottom"><p>Snapshot from 11 Oct 2026. These are individual runs against public demo environments, not a guarantee of future results or a performance benchmark.</p><a class="btn btn-secondary" href="qa-case-study.html">Read the API QA case study <span>↗</span></a></div>
+</div></section>
 <section class="wrap section" id="experience">
-<div class="section-head"><div><p class="section-kicker">02 / EXPERIENCE</p><h2>Professional experience.</h2></div></div>
+<div class="section-head"><div><p class="section-kicker">03 / EXPERIENCE</p><h2>Professional experience.</h2></div></div>
 <div class="experience-layout">
 <div class="work-history">
 <article class="experience-card">
@@ -223,7 +250,7 @@
 </div>
 </section>
 <section class="surface-section" id="education"><div class="wrap section">
-<div class="section-head"><div><p class="section-kicker">03 / EDUCATION</p><h2>Education & certification.</h2></div></div>
+<div class="section-head"><div><p class="section-kicker">04 / EDUCATION</p><h2>Education & certification.</h2></div></div>
 <ul class="education-list">
 <li class="education-row"><div class="education-date">2020 — 2024</div><div class="education-detail"><h3>Bachelor of Engineering (Hons) in Software Engineering</h3><p>Informatics Institute of Technology (IIT), affiliated with the University of Westminster</p></div><span class="education-kind">DEGREE</span></li>
 <li class="education-row"><div class="education-date">2019 — 2020</div><div class="education-detail"><h3>Foundation Certificate in Higher Education</h3><p>Informatics Institute of Technology (IIT)</p></div><span class="education-kind">FOUNDATION</span></li>
@@ -232,7 +259,7 @@
 </ul>
 </div></section>
 <section class="surface-section" id="toolkit"><div class="wrap section">
-<div class="section-head"><div><p class="section-kicker">04 / TECHNICAL TOOLKIT</p><h2>The tools behind the thinking.</h2></div></div>
+<div class="section-head"><div><p class="section-kicker">05 / TECHNICAL TOOLKIT</p><h2>The tools behind the thinking.</h2></div></div>
 <div class="skills-grid">
 <div class="skill-card"><h3><span>01</span> QA & test design</h3><div class="skill-tags"><span>Manual testing</span><span>Functional</span><span>Integration testing</span><span>Regression</span><span>Smoke testing</span><span>Ad-hoc testing</span><span>Black-box testing</span><span>Risk-based testing</span><span>Test planning</span><span>Test case design</span><span>Test execution & reporting</span><span>Defect lifecycle</span><span>Test documentation</span><span>Root-cause investigation</span><span>Release validation</span></div></div>
 <div class="skill-card"><h3><span>02</span> Automation & BDD</h3><div class="skill-tags"><span>Cypress</span><span>Cucumber / Gherkin</span><span>Playwright</span><span>TypeScript</span><span>JavaScript</span><span>Page Object Model</span><span>GitHub Actions</span></div></div>
