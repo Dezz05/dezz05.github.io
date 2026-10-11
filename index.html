@@ -143,6 +143,14 @@
 .evidence-bottom .btn{flex-shrink:0}
 @media(max-width:760px){.execution-grid{grid-template-columns:1fr}.execution-card{padding:18px}.execution-card>strong{margin-top:15px}.evidence-bottom{align-items:flex-start;flex-direction:column}.evidence-bottom .btn{width:100%;justify-content:space-between}}
 
+
+.case-study-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.case-study-card h3{margin:22px 0 8px;font-size:15px;line-height:1.45;letter-spacing:-.02em}
+.case-study-card p{font-size:11px;line-height:1.85}
+.case-study-pill{display:inline-flex;align-items:center;border:1px solid rgba(116,240,228,.22);background:rgba(116,240,228,.035);border-radius:5px;padding:3px 6px;font:800 8px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.06em;color:var(--cyan)}
+.case-study-note{margin-top:14px;color:var(--dim);font-size:10px;line-height:1.8}
+@media(max-width:760px){.case-study-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -151,7 +159,7 @@
 <div class="wrap header-inner">
 <a class="brand" href="#top" aria-label="Raagul Sivanathan home"><span class="brand-mark" aria-hidden="true"><b>R</b><i></i></span><span class="brand-text"><strong>RAAGUL SIVANATHAN</strong><small>QUALITY ENGINEERING</small></span></a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">☰</button>
-<nav class="nav" id="primary-nav" aria-label="Main navigation"><a href="#work">Selected work</a><a href="#evidence">Test evidence</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#toolkit">Toolkit</a><a class="nav-contact" href="#contact">Contact ↗</a></nav>
+<nav class="nav" id="primary-nav" aria-label="Main navigation"><a href="#work">Selected work</a><a href="#evidence">Test evidence</a><a href="#case-studies">Case studies</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#toolkit">Toolkit</a><a class="nav-contact" href="#contact">Contact ↗</a></nav>
 </div>
 </header>
 <main id="main">
@@ -215,6 +223,26 @@
 </div>
 <div class="evidence-bottom"><p>Snapshot from 11 Oct 2026. These are individual runs against public demo environments, not a guarantee of future results or a performance benchmark.</p><a class="btn btn-secondary" href="qa-case-study.html">Read the API QA case study <span>↗</span></a></div>
 </div></section>
+
+<section class="surface-section" id="case-studies"><div class="wrap section">
+<div class="section-head"><div><p class="section-kicker">QA STRATEGY / CASE STUDIES</p><h2>How I think about QA beyond execution.</h2></div><p>Two design-led explorations of how AI can support quality engineering while keeping risk, evidence, and human judgement at the centre.</p></div>
+<div class="case-study-grid">
+<a class="execution-card case-study-card" href="agentic-ai-qa-case-study.html">
+<div class="execution-top"><span class="execution-type">AGENTIC AI / QA DESIGN</span><span class="case-study-pill">CONCEPT</span></div>
+<h3>Agentic AI in QA: Controlled autonomy, trusted evidence</h3>
+<p>A proposed agent workflow for requirements analysis, risk-focused test design, controlled execution, human approval, and measurable safeguards.</p>
+<span class="execution-link">Read case study ↗</span>
+</a>
+<a class="execution-card case-study-card" href="automation-ai-case-study.html">
+<div class="execution-top"><span class="execution-type">AUTOMATION / AI STRATEGY</span><span class="case-study-pill">QA PERSPECTIVE</span></div>
+<h3>Automation is not the strategy. Confidence is.</h3>
+<p>A practical perspective on what to automate, how AI can help with design and maintenance, why human exploration remains important, and what outcomes to measure.</p>
+<span class="execution-link">Read case study ↗</span>
+</a>
+</div>
+<p class="case-study-note">These are conceptual strategy case studies. They do not claim that the linked automation repositories use autonomous AI agents; the repositories provide separate, inspectable automation evidence.</p>
+</div></section>
+
 <section class="wrap section" id="experience">
 <div class="section-head"><div><p class="section-kicker">03 / EXPERIENCE</p><h2>Professional experience.</h2></div></div>
 <div class="experience-layout">
