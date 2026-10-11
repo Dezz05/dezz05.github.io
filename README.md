@@ -46,6 +46,6 @@ Most content and styling live in `index.html`. If you update the employment time
 
 - The public site intentionally omits the street address and reference contact details from the CV.
 - The professional contact email is shown for recruitment and networking.
-- A downloadable CV has not been attached; use a specifically prepared public version rather than publishing a CV containing a private address or third-party referee details.
+- The downloadable resume is a public-edition summary. It intentionally omits the street address and third-party referee contact details present in the source CV.
 - The portfolio claims about five web-based projects and 100+ automated test cases are drawn from the supplied CV. The three linked GitHub repositories are independent portfolio demonstrations using third-party demo systems, not source code from employer projects.
 - Demo applications, demo credentials, data, APIs, and live workflow results may change. Review repository documentation and run details before interpreting a badge or execution result.
