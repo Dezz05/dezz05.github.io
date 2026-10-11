@@ -71,6 +71,15 @@
 .accomplishment-item p{margin:0;color:var(--muted);font-size:10px;line-height:1.85}
 @media(max-width:560px){.accomplishment-grid{grid-template-columns:1fr}.accomplishments-heading{align-items:flex-start;flex-direction:column;gap:5px}.accomplishments-heading>span{text-align:left}}
 
+
+/* CV-style accomplishment bullets kept inside the existing employment card */
+.accomplishment-points{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.accomplishment-points li{position:relative;margin:0;padding:0 0 12px 18px;border-bottom:1px solid var(--line);color:var(--muted);font-size:10px;line-height:1.9}
+.accomplishment-points li:last-child{padding-bottom:0;border-bottom:0}
+.accomplishment-points li:before{content:"";position:absolute;left:1px;top:7px;width:5px;height:5px;border-radius:50%;background:var(--blue);box-shadow:0 0 10px rgba(121,195,255,.24)}
+.accomplishment-points b{color:#e0e9f6;font-weight:750}
+@media(max-width:560px){.accomplishment-points{gap:10px}.accomplishment-points li{padding-left:16px}}
+
 </style>
 </head>
 <body>
@@ -153,12 +162,12 @@
 <article class="experience-card">
 <div class="experience-top"><span class="company-mark">AZ</span><div class="company-copy"><h3>Azend Technologies Pvt Ltd</h3><p>Associate Quality Assurance Engineer · Colombo, Sri Lanka</p></div><span class="employment-date">APR 2024 — PRESENT</span></div>
 <div class="accomplishments-heading"><p class="section-kicker">ACCOMPLISHMENTS · APR 2024 — PRESENT</p><span>Selected outcomes from this role</span></div>
-<div class="accomplishment-grid">
-<article class="accomplishment-item"><span class="accomplishment-index">01 / AUTOMATION COVERAGE</span><h4>Expanded automated regression coverage</h4><p>Developed and maintained 100+ Cypress, TypeScript, and Cucumber test cases across five web-based projects, improving regression coverage and reducing repetitive manual testing effort.</p></article>
-<article class="accomplishment-item"><span class="accomplishment-index">02 / RELEASE VALIDATION</span><h4>Improved confidence in changes and releases</h4><p>Validated application behaviour through functional, regression, API, and deployment testing; identified high-risk areas, system limitations, and testing gaps against business and technical requirements.</p></article>
-<article class="accomplishment-item"><span class="accomplishment-index">03 / DEFECT RESOLUTION</span><h4>Made issues easier to investigate and retest</h4><p>Contributed to defect analysis, debugging, root-cause investigation, and retesting, while maintaining structured test plans, cases, defect reports, execution results, and QA reports.</p></article>
-<article class="accomplishment-item"><span class="accomplishment-index">04 / TEAM & PROCESS</span><h4>Supported team capability and QA efficiency</h4><p>Collaborated with developers, clients, and stakeholders; mentored junior QA interns; and applied AI-assisted approaches to support test analysis, test design, defect investigation, and documentation.</p></article>
-</div>
+<ul class="accomplishment-points">
+<li><b>Expanded automated regression coverage:</b> Developed and maintained 100+ Cypress, TypeScript, and Cucumber test cases across five web-based projects, improving regression coverage and reducing repetitive manual testing effort.</li>
+<li><b>Supported release quality and risk identification:</b> Performed functional, regression, API, and deployment testing, identifying high-risk areas, system limitations, and testing gaps against business and technical requirements.</li>
+<li><b>Strengthened defect investigation and reporting:</b> Contributed to debugging, root-cause investigation, and retesting while maintaining structured test plans, test cases, defect reports, execution results, and QA reports.</li>
+<li><b>Improved team capability and QA workflows:</b> Collaborated with developers, clients, and stakeholders; mentored junior QA interns; and applied AI-assisted approaches to support test analysis, test design, defect investigation, and documentation.</li>
+</ul>
 </article>
 <article class="experience-card">
 <div class="experience-top"><span class="company-mark">DI</span><div class="company-copy"><h3>:Different</h3><p>Quality Assurance Intern · Colombo, Sri Lanka</p></div><span class="employment-date">JUL 2022 — JUL 2023</span></div>
