@@ -1574,91 +1574,112 @@ body{font-size:var(--fs-body);line-height:1.7}
 }
 </style>
 
-<style id="selected-work-final">
-/* SELECTED WORK — clean listed layout */
+<style id="selected-work-professional">
+/* SELECTED WORK — professional project list */
 #work .projects{
   display:flex !important;
   flex-direction:column !important;
   width:100% !important;
-  gap:0 !important;
+  margin:0 !important;
+  padding:0 !important;
   border-top:1px solid var(--line) !important;
+  gap:0 !important;
 }
-#work .projects > .card{
+#work .projects > .card,
+#work .projects > .card.featured{
   position:relative !important;
   display:grid !important;
-  grid-template-columns:48px 190px minmax(0,1fr) 125px !important;
-  grid-template-rows:auto auto !important;
+  grid-template-columns:205px minmax(0,1fr) 125px !important;
+  grid-template-rows:auto auto auto !important;
   grid-template-areas:
-    "meta title title links"
-    "meta details details links" !important;
+    "meta title links"
+    "meta summary links"
+    "meta points links" !important;
   align-items:center !important;
   width:100% !important;
   min-width:0 !important;
-  min-height:150px !important;
-  height:auto !important;
+  min-height:168px !important;
   box-sizing:border-box !important;
-  padding:24px 4px !important;
+  padding:27px 4px !important;
   margin:0 !important;
   border:0 !important;
   border-bottom:1px solid var(--line) !important;
   border-radius:0 !important;
   background:transparent !important;
+  background-image:none !important;
+  box-shadow:none !important;
+  transform:none !important;
+  overflow:visible !important;
+}
+#work .projects > .card:hover,
+#work .projects > .card:hover::before,
+#work .projects > .card:hover::after{
+  background:rgba(121,195,255,.018) !important;
+  background-image:none !important;
   box-shadow:none !important;
   transform:none !important;
 }
-#work .projects > .card.featured{grid-column:auto !important}
-#work .projects > .card:hover{
-  background:linear-gradient(90deg,rgba(121,195,255,.035),rgba(121,195,255,.008),transparent) !important;
-  transform:none !important;
+#work .projects > .card::before,
+#work .projects > .card::after,
+#work .projects > .card .arrow{
+  display:none !important;
+  content:none !important;
 }
 #work .projects > .card .card-top{
   grid-area:meta !important;
   display:flex !important;
   align-items:center !important;
-  gap:10px !important;
+  gap:12px !important;
   min-width:0 !important;
   margin:0 !important;
   padding:0 !important;
 }
 #work .projects > .card .project-icon{
-  width:38px !important;
-  height:38px !important;
-  flex:0 0 38px !important;
+  flex:0 0 40px !important;
+  width:40px !important;
+  height:40px !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:11px !important;
 }
 #work .projects > .card .type{
+  min-width:0 !important;
+  color:var(--dim) !important;
   font-size:8px !important;
-  line-height:1.4 !important;
-  letter-spacing:.13em !important;
+  line-height:1.45 !important;
+  font-weight:850 !important;
+  letter-spacing:.14em !important;
   white-space:normal !important;
 }
-#work .projects > .card .arrow{display:none !important}
 #work .projects > .card h3{
   grid-area:title !important;
   align-self:end !important;
   min-width:0 !important;
-  margin:0 0 3px !important;
-  font-size:17px !important;
-  line-height:1.35 !important;
-  letter-spacing:-.03em !important;
-  font-weight:720 !important;
+  margin:0 0 4px !important;
+  color:var(--text) !important;
+  font-size:18px !important;
+  line-height:1.3 !important;
+  font-weight:730 !important;
+  letter-spacing:-.035em !important;
 }
 #work .projects > .card p{
-  grid-area:details !important;
+  grid-area:summary !important;
+  align-self:center !important;
   min-width:0 !important;
+  max-width:820px !important;
   margin:0 !important;
-  max-width:760px !important;
   color:var(--muted) !important;
-  font-size:11px !important;
-  line-height:1.65 !important;
+  font-size:10.5px !important;
+  line-height:1.7 !important;
 }
 #work .projects > .card .points{
-  grid-area:details !important;
+  grid-area:points !important;
   display:flex !important;
   flex-wrap:wrap !important;
   align-items:center !important;
-  gap:4px 18px !important;
+  gap:4px 22px !important;
   min-width:0 !important;
-  margin:28px 0 0 !important;
+  margin:5px 0 0 !important;
   padding:0 !important;
   list-style:none !important;
   color:#b9c7d8 !important;
@@ -1667,10 +1688,11 @@ body{font-size:var(--fs-body);line-height:1.7}
 }
 #work .projects > .card .points li{
   display:flex !important;
-  gap:5px !important;
+  align-items:center !important;
+  gap:6px !important;
   white-space:nowrap !important;
 }
-#work .projects > .card .points li:before{
+#work .projects > .card .points li::before{
   content:"↳" !important;
   color:var(--blue) !important;
   font-family:ui-monospace,SFMono-Regular,Consolas,monospace !important;
@@ -1682,82 +1704,76 @@ body{font-size:var(--fs-body);line-height:1.7}
   flex-direction:column !important;
   align-items:flex-end !important;
   justify-content:center !important;
-  gap:7px !important;
+  gap:8px !important;
   min-width:0 !important;
   margin:0 !important;
-  padding:0 0 0 16px !important;
+  padding:0 0 0 18px !important;
   border:0 !important;
   border-left:1px solid var(--line) !important;
 }
 #work .projects > .card .card-links a{
   font-size:9px !important;
-  line-height:1.4 !important;
+  line-height:1.45 !important;
   font-weight:750 !important;
+  color:var(--text) !important;
   white-space:nowrap !important;
 }
-#work .projects > .card:before{display:none !important;content:none !important}
+#work .projects > .card .card-links a span{
+  color:var(--blue) !important;
+}
+#work .note{
+  margin-top:14px !important;
+  font-size:9px !important;
+  line-height:1.7 !important;
+  color:var(--dim) !important;
+}
 @media(max-width:900px){
-  #work .projects > .card{
-    grid-template-columns:42px 155px minmax(0,1fr) 105px !important;
-    column-gap:18px !important;
+  #work .projects > .card,
+  #work .projects > .card.featured{
+    grid-template-columns:175px minmax(0,1fr) 105px !important;
+    min-height:155px !important;
+    padding-block:23px !important;
   }
+  #work .projects > .card h3{font-size:17px !important}
 }
 @media(max-width:760px){
-  #work .projects > .card{
-    grid-template-columns:30px minmax(0,1fr) auto !important;
-    grid-template-rows:auto auto auto !important;
+  #work .projects > .card,
+  #work .projects > .card.featured{
+    grid-template-columns:44px minmax(0,1fr) auto !important;
+    grid-template-rows:auto auto auto auto !important;
     grid-template-areas:
       "meta title links"
-      "meta details links"
-      "meta points points" !important;
+      "meta summary summary"
+      "meta points points"
+      "meta . ." !important;
     min-height:0 !important;
     padding:20px 2px !important;
+    column-gap:12px !important;
+    row-gap:7px !important;
   }
+  #work .projects > .card .card-top{
+    align-self:start !important;
+    justify-content:center !important;
+  }
+  #work .projects > .card .project-icon{
+    width:36px !important;
+    height:36px !important;
+    flex-basis:36px !important;
+  }
+  #work .projects > .card .type{display:none !important}
   #work .projects > .card h3{font-size:16px !important}
-  #work .projects > .card p{font-size:10px !important}
+  #work .projects > .card p{font-size:10px !important;line-height:1.7 !important}
   #work .projects > .card .points{
-    grid-area:points !important;
-    margin-top:8px !important;
+    gap:4px 12px !important;
+    margin-top:2px !important;
     font-size:8.5px !important;
   }
   #work .projects > .card .points li{white-space:normal !important}
-  #work .projects > .card .card-links{padding-left:10px !important}
+  #work .projects > .card .card-links{
+    padding-left:10px !important;
+    gap:5px !important;
+  }
   #work .projects > .card .card-links a{font-size:8px !important}
-}
-</style>
-<style id="selected-work-clean-bg">
-/* SELECTED WORK — remove all legacy decorative/background effects */
-#work .projects > .card,
-#work .projects > .card.featured{
-  background:#080b11 !important;
-  background-image:none !important;
-  box-shadow:none !important;
-}
-#work .projects > .card::before,
-#work .projects > .card::after,
-#work .projects > .card.featured::before,
-#work .projects > .card.featured::after{
-  display:none !important;
-  content:none !important;
-  opacity:0 !important;
-  background:none !important;
-  box-shadow:none !important;
-}
-#work .projects > .card .arrow,
-#work .projects > .card-top .arrow{
-  display:none !important;
-  visibility:hidden !important;
-  opacity:0 !important;
-  width:0 !important;
-  height:0 !important;
-}
-#work .projects > .card:hover,
-#work .projects > .card:hover::before,
-#work .projects > .card:hover::after{
-  background:#080b11 !important;
-  background-image:none !important;
-  box-shadow:none !important;
-  transform:none !important;
 }
 </style>
 </head>
