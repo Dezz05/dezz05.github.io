@@ -2379,10 +2379,11 @@ html[data-theme="light"] #toolkit .domain-list span{
   margin:0 !important;
   background:var(--line2) !important;
 }
-.theme-sun{color:var(--blue) !important;opacity:1 !important}
-.theme-moon{color:var(--muted) !important;opacity:.42 !important}
-html[data-theme="light"] .theme-sun{color:#155fae !important;opacity:.4 !important}
-html[data-theme="light"] .theme-moon{color:#155fae !important;opacity:1 !important}
+/* Moon = dark mode, Sun = light mode */
+.theme-sun{color:var(--muted) !important;opacity:.42 !important}
+.theme-moon{color:var(--blue) !important;opacity:1 !important}
+html[data-theme="light"] .theme-sun{color:#155fae !important;opacity:1 !important}
+html[data-theme="light"] .theme-moon{color:#53677b !important;opacity:.42 !important}
 html[data-theme="light"] .theme-divider{background:rgba(16,36,58,.18) !important}
 @media(max-width:760px){
   .nav .theme-toggle{
