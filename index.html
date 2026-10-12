@@ -1719,6 +1719,151 @@ body{font-size:var(--fs-body);line-height:1.7}
   }
 }
 </style>
+<style id="selected-work-true-list">
+/* SELECTED WORK — true horizontal project list */
+#work .projects{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:0 !important;
+  border-top:1px solid var(--line) !important;
+}
+#work .card,
+#work .card.featured{
+  display:grid !important;
+  grid-template-columns:190px minmax(210px,.7fr) minmax(300px,1.35fr) 120px !important;
+  grid-template-areas:"meta title details links" !important;
+  align-items:center !important;
+  column-gap:30px !important;
+  row-gap:0 !important;
+  width:100% !important;
+  min-height:170px !important;
+  padding:26px 4px !important;
+  margin:0 !important;
+  border:0 !important;
+  border-bottom:1px solid var(--line) !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+#work .card:hover,
+#work .card.featured:hover{
+  background:linear-gradient(90deg,rgba(121,195,255,.035),rgba(121,195,255,.012),transparent) !important;
+  border-color:var(--line) !important;
+  transform:none !important;
+}
+#work .card-top{
+  grid-area:meta !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:11px !important;
+  min-width:0 !important;
+  margin:0 !important;
+}
+#work .project-icon{
+  width:40px !important;
+  height:40px !important;
+  flex:0 0 40px !important;
+}
+#work .type{
+  font-size:8px !important;
+  line-height:1.4 !important;
+  letter-spacing:.13em !important;
+}
+#work .arrow{
+  margin-left:auto !important;
+  position:static !important;
+  font-size:16px !important;
+}
+#work .card h3{
+  grid-area:title !important;
+  align-self:center !important;
+  margin:0 !important;
+  font-size:18px !important;
+  line-height:1.35 !important;
+  letter-spacing:-.035em !important;
+}
+#work .card p{
+  grid-area:details !important;
+  align-self:center !important;
+  margin:0 0 9px !important;
+  max-width:none !important;
+  font-size:11px !important;
+  line-height:1.7 !important;
+}
+#work .points{
+  grid-area:details !important;
+  align-self:end !important;
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:5px 14px !important;
+  margin:0 !important;
+  padding:0 !important;
+  list-style:none !important;
+  font-size:9px !important;
+  line-height:1.5 !important;
+}
+#work .points li{
+  display:flex !important;
+  gap:5px !important;
+}
+#work .points li:before{
+  content:"↳" !important;
+}
+#work .tags{
+  display:none !important;
+}
+#work .card-links{
+  grid-area:links !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-end !important;
+  justify-content:center !important;
+  gap:8px !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  white-space:nowrap !important;
+}
+#work .card-links a{
+  font-size:9px !important;
+  line-height:1.4 !important;
+}
+#work .card.featured{
+  grid-column:auto !important;
+}
+@media(max-width:900px){
+  #work .card,
+  #work .card.featured{
+    grid-template-columns:155px minmax(170px,.7fr) minmax(220px,1fr) 105px !important;
+    column-gap:20px !important;
+  }
+}
+@media(max-width:760px){
+  #work .card,
+  #work .card.featured{
+    grid-template-columns:1fr auto !important;
+    grid-template-areas:"meta links" "title links" "details details" !important;
+    align-items:start !important;
+    row-gap:12px !important;
+    min-height:0 !important;
+    padding:22px 2px !important;
+  }
+  #work .card h3{
+    font-size:16px !important;
+  }
+  #work .card p{
+    margin-bottom:8px !important;
+    font-size:10px !important;
+  }
+  #work .points{
+    font-size:9px !important;
+  }
+  #work .card-links{
+    align-items:flex-end !important;
+  }
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
