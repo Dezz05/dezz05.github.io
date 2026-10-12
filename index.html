@@ -1574,6 +1574,151 @@ body{font-size:var(--fs-body);line-height:1.7}
 }
 </style>
 
+<style id="selected-work-listed-layout">
+/* SELECTED WORK — listed rows */
+#work .projects-grid,
+#work .projects{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:0 !important;
+  border-top:1px solid var(--line);
+}
+#work .project,
+#work .project.featured,
+#work .card,
+#work .card.featured{
+  display:grid !important;
+  grid-template-columns:58px minmax(190px,.72fr) minmax(0,1.45fr) auto !important;
+  grid-template-areas:"index head content links" !important;
+  align-items:center !important;
+  gap:24px !important;
+  min-height:150px !important;
+  padding:24px 4px !important;
+  border:0 !important;
+  border-bottom:1px solid var(--line) !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+#work .project:hover,
+#work .card:hover{
+  border-color:var(--line) !important;
+  background:linear-gradient(90deg,rgba(121,195,255,.025),rgba(121,195,255,.01),transparent) !important;
+  transform:none !important;
+}
+#work .project-head,
+#work .card-top{
+  grid-area:head !important;
+  margin:0 !important;
+  min-width:0 !important;
+}
+#work .project-symbol,
+#work .project-icon{
+  width:36px;height:36px;
+}
+#work .project-category,
+#work .project-name-small,
+#work .type{
+  white-space:normal !important;
+}
+#work .project h3,
+#work .card h3{
+  grid-area:head !important;
+  margin:0 0 0 47px !important;
+  align-self:center !important;
+  font-size:16px !important;
+  line-height:1.4 !important;
+  letter-spacing:-.025em !important;
+}
+#work .project-head{
+  display:flex !important;
+  align-items:center !important;
+}
+#work .project-head .project-symbol{
+  flex:none;
+}
+#work .project-summary,
+#work .card p{
+  grid-area:content !important;
+  margin:0 !important;
+  font-size:11px !important;
+  line-height:1.75 !important;
+  max-width:620px;
+}
+#work .project-points,
+#work .points{
+  grid-area:content !important;
+  margin:0 !important;
+  font-size:10px !important;
+}
+#work .project-tags,
+#work .tags{
+  display:none !important;
+}
+#work .project-links,
+#work .card-links{
+  grid-area:links !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-end !important;
+  gap:6px !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  white-space:nowrap;
+}
+#work .project-links a,
+#work .card-links a{
+  font-size:9px !important;
+}
+#work .ci-box{
+  display:none !important;
+}
+#work .project-arrow,
+#work .arrow{
+  position:absolute;
+  right:4px;
+  top:24px;
+  font-size:16px;
+}
+@media(max-width:760px){
+  #work .project,
+  #work .project.featured,
+  #work .card,
+  #work .card.featured{
+    grid-template-columns:40px minmax(0,1fr) auto !important;
+    grid-template-areas:
+      "index head links"
+      "index content links" !important;
+    gap:10px 14px !important;
+    min-height:0 !important;
+    padding:20px 2px !important;
+  }
+  #work .project h3,
+  #work .card h3{
+    margin:0 !important;
+    font-size:15px !important;
+  }
+  #work .project-summary,
+  #work .card p{
+    font-size:10px !important;
+    line-height:1.75 !important;
+  }
+  #work .project-points,
+  #work .points{
+    font-size:9px !important;
+  }
+  #work .project-links,
+  #work .card-links{
+    gap:4px !important;
+  }
+  #work .project-links a,
+  #work .card-links a{
+    font-size:8px !important;
+  }
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
