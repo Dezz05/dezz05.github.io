@@ -1719,6 +1719,59 @@ body{font-size:var(--fs-body);line-height:1.7}
   }
 }
 </style>
+<style id="selected-work-render-fix">
+/* SELECTED WORK — neutralize legacy card rules so the listed layout renders correctly */
+#work .projects{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) !important;
+  grid-auto-flow:row !important;
+  gap:0 !important;
+}
+#work .projects > .card,
+#work .projects > .card.featured{
+  grid-column:1 !important;
+  grid-row:auto !important;
+  min-height:0 !important;
+  height:auto !important;
+  overflow:visible !important;
+  padding:24px 4px !important;
+  margin:0 !important;
+  border:0 !important;
+  border-bottom:1px solid var(--line) !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+#work .projects > .card:before,
+#work .projects > .card.featured:before{
+  display:none !important;
+  content:none !important;
+}
+#work .projects > .card-top .arrow{
+  display:none !important;
+}
+#work .projects > .card h3,
+#work .projects > .card p,
+#work .projects > .card .points,
+#work .projects > .card .card-links{
+  min-width:0 !important;
+}
+#work .projects > .card .points{
+  margin-bottom:0 !important;
+}
+#work .projects > .card .card-links{
+  align-self:center !important;
+}
+@media(max-width:760px){
+  #work .projects > .card,
+  #work .projects > .card.featured{
+    grid-column:1 !important;
+    min-height:0 !important;
+    padding:20px 2px !important;
+  }
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
