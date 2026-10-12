@@ -2340,6 +2340,60 @@ html[data-theme="light"] #toolkit .domain-list span{
   color:#53677b !important;
 }
 </style>
+<style id="theme-toggle-final">
+/* FINAL THEME TOGGLE — icon-only sun / divider / moon */
+.theme-toggle{
+  box-sizing:border-box !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  flex:0 0 78px !important;
+  width:78px !important;
+  min-width:78px !important;
+  height:44px !important;
+  min-height:44px !important;
+  padding:0 12px !important;
+  gap:8px !important;
+  overflow:visible !important;
+  border:1px solid var(--line2) !important;
+  border-radius:999px !important;
+  background:rgba(255,255,255,.025) !important;
+}
+.theme-sun,.theme-moon{
+  display:grid !important;
+  place-items:center !important;
+  flex:0 0 20px !important;
+  width:20px !important;
+  height:20px !important;
+  margin:0 !important;
+  padding:0 !important;
+  font-family:system-ui,sans-serif !important;
+  font-size:20px !important;
+  line-height:20px !important;
+}
+.theme-divider{
+  display:block !important;
+  flex:0 0 1px !important;
+  width:1px !important;
+  height:22px !important;
+  margin:0 !important;
+  background:var(--line2) !important;
+}
+.theme-sun{color:var(--blue) !important;opacity:1 !important}
+.theme-moon{color:var(--muted) !important;opacity:.42 !important}
+html[data-theme="light"] .theme-sun{color:#155fae !important;opacity:.4 !important}
+html[data-theme="light"] .theme-moon{color:#155fae !important;opacity:1 !important}
+html[data-theme="light"] .theme-divider{background:rgba(16,36,58,.18) !important}
+@media(max-width:760px){
+  .nav .theme-toggle{
+    width:78px !important;
+    min-width:78px !important;
+    flex-basis:78px !important;
+    height:44px !important;
+    min-height:44px !important;
+  }
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
