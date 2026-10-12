@@ -1763,6 +1763,163 @@ body{font-size:var(--fs-body);line-height:1.7}
   }
 }
 </style>
+<style id="selected-work-layout-fix">
+/* SELECTED WORK — fix list hierarchy without affecting other sections */
+#work .projects{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) !important;
+  gap:0 !important;
+  border-top:1px solid var(--line) !important;
+}
+#work .projects > .card,
+#work .projects > .card.featured{
+  grid-column:1 !important;
+  display:grid !important;
+  grid-template-columns:52px 185px minmax(0,1fr) 120px !important;
+  grid-template-rows:auto auto auto !important;
+  grid-template-areas:
+    "index meta title links"
+    "index meta summary links"
+    "index meta points links" !important;
+  align-items:center !important;
+  column-gap:24px !important;
+  row-gap:5px !important;
+  min-height:0 !important;
+  padding:25px 4px !important;
+  margin:0 !important;
+  border:0 !important;
+  border-bottom:1px solid var(--line) !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+#work .projects > .card:before{
+  content:counter(selected-work) !important;
+  counter-increment:selected-work !important;
+  grid-area:index !important;
+  align-self:center !important;
+  color:rgba(121,195,255,.55) !important;
+  font:600 9px/1 ui-monospace,SFMono-Regular,Consolas,monospace !important;
+  letter-spacing:.12em !important;
+}
+#work .projects{counter-reset:selected-work !important}
+#work .projects > .card-top{
+  grid-area:meta !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  min-width:0 !important;
+  margin:0 !important;
+}
+#work .projects > .card-top .project-icon{
+  width:38px !important;
+  height:38px !important;
+  flex:0 0 38px !important;
+}
+#work .projects > .card-top .type{
+  font-size:8px !important;
+  line-height:1.4 !important;
+  font-weight:850 !important;
+  letter-spacing:.12em !important;
+}
+#work .projects > .card-top .arrow{
+  display:none !important;
+}
+#work .projects > .card h3{
+  grid-area:title !important;
+  align-self:end !important;
+  margin:0 !important;
+  font-size:17px !important;
+  line-height:1.35 !important;
+  font-weight:720 !important;
+  letter-spacing:-.03em !important;
+}
+#work .projects > .card p{
+  grid-area:summary !important;
+  align-self:center !important;
+  margin:0 !important;
+  max-width:760px !important;
+  color:var(--muted) !important;
+  font-size:10.5px !important;
+  line-height:1.65 !important;
+}
+#work .projects > .card .points{
+  grid-area:points !important;
+  display:flex !important;
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  gap:4px 18px !important;
+  margin:0 !important;
+  padding:0 !important;
+  list-style:none !important;
+  color:#b9c7d8 !important;
+  font-size:9px !important;
+  line-height:1.5 !important;
+}
+#work .projects > .card .points li{
+  display:flex !important;
+  gap:5px !important;
+  white-space:nowrap !important;
+}
+#work .projects > .card .points li:before{
+  content:"↳" !important;
+  color:var(--blue) !important;
+  font-family:ui-monospace,SFMono-Regular,Consolas,monospace !important;
+}
+#work .projects > .card .tags{display:none !important}
+#work .projects > .card .card-links{
+  grid-area:links !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-end !important;
+  justify-content:center !important;
+  gap:7px !important;
+  margin:0 !important;
+  padding-left:16px !important;
+  border:0 !important;
+  border-left:1px solid var(--line) !important;
+}
+#work .projects > .card .card-links a{
+  font-size:9px !important;
+  line-height:1.4 !important;
+  font-weight:750 !important;
+  white-space:nowrap !important;
+}
+#work .projects > .card:hover{
+  background:linear-gradient(90deg,rgba(121,195,255,.035),rgba(121,195,255,.01),transparent) !important;
+  transform:none !important;
+}
+@media(max-width:900px){
+  #work .projects > .card,
+  #work .projects > .card.featured{
+    grid-template-columns:38px 150px minmax(0,1fr) 100px !important;
+    column-gap:18px !important;
+    padding-block:22px !important;
+  }
+}
+@media(max-width:760px){
+  #work .projects > .card,
+  #work .projects > .card.featured{
+    grid-template-columns:28px minmax(0,1fr) auto !important;
+    grid-template-rows:auto auto auto auto !important;
+    grid-template-areas:
+      "index meta links"
+      "index title links"
+      "index summary summary"
+      "index points points" !important;
+    column-gap:12px !important;
+    row-gap:7px !important;
+    padding:20px 2px !important;
+  }
+  #work .projects > .card h3{font-size:16px !important}
+  #work .projects > .card p{font-size:10px !important}
+  #work .projects > .card .points{font-size:8.5px !important}
+  #work .projects > .card .points li{white-space:normal !important}
+  #work .projects > .card .card-links{padding-left:10px !important}
+  #work .projects > .card .card-links a{font-size:8px !important}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
