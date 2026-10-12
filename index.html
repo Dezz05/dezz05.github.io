@@ -1719,6 +1719,50 @@ body{font-size:var(--fs-body);line-height:1.7}
   }
 }
 </style>
+<style id="education-edge-polish">
+/* EDUCATION — cleaner edge spacing */
+#education .education-list{
+  margin-top:2px !important;
+  border:1px solid var(--line) !important;
+  border-radius:16px !important;
+  overflow:hidden !important;
+  background:rgba(255,255,255,.008) !important;
+}
+#education .education-row{
+  min-height:112px !important;
+  padding:24px 28px !important;
+  border-bottom:1px solid var(--line) !important;
+  background:rgba(255,255,255,.012) !important;
+}
+#education .education-row:last-child{
+  border-bottom:0 !important;
+}
+#education .education-date{
+  font-size:9px !important;
+}
+#education .education-detail h3{
+  font-size:15px !important;
+  line-height:1.4 !important;
+  margin-bottom:6px !important;
+}
+#education .education-detail p{
+  font-size:11px !important;
+  line-height:1.7 !important;
+}
+#education .education-kind{
+  font-size:8px !important;
+  letter-spacing:.13em !important;
+}
+@media(max-width:760px){
+  #education .education-list{
+    border-radius:13px !important;
+  }
+  #education .education-row{
+    min-height:0 !important;
+    padding:18px 16px !important;
+  }
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
