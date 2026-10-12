@@ -983,6 +983,124 @@ html[data-theme="light"] .hero-lede strong{color:#21384f}
   }
   #work .project h3{font-size:19px}
 }
+/* Selected Work: restore CI evidence and normal horizontal text */
+#work .projects-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:15px;
+}
+#work .project,
+#work .project.featured{
+  position:relative;
+  min-width:0;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(190px,.52fr);
+  grid-template-areas:
+    "head ci"
+    "title ci"
+    "summary ci"
+    "points ci"
+    "tags ci"
+    "links ci";
+  column-gap:24px;
+  row-gap:0;
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(20,28,39,.96),rgba(14,19,27,.97));
+  transition:transform .23s,border-color .23s;
+}
+#work .project.featured{
+  grid-column:span 2;
+  grid-template-columns:minmax(0,1.25fr) minmax(220px,.75fr);
+  min-height:320px;
+  padding:27px;
+  column-gap:28px;
+}
+#work .project:hover{
+  transform:translateY(-4px);
+  border-color:rgba(121,195,255,.35);
+}
+#work .project .project-head{grid-area:head;display:flex;align-items:center;gap:11px;margin-bottom:20px}
+#work .project h3{grid-area:title;margin:0 0 11px;font-size:21px;line-height:1.3;letter-spacing:-.04em}
+#work .project-summary{grid-area:summary;margin:0 0 17px;color:var(--muted);font-size:11px;line-height:1.9;max-width:720px}
+#work .project-points{grid-area:points;display:grid;gap:7px;list-style:none;padding:0;margin:0 0 20px;color:#cfdaea;font-size:10px}
+#work .project-points li{display:flex;gap:8px;align-items:flex-start}
+#work .project-points li:before{content:"↳";color:var(--blue);font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+#work .project-tags{grid-area:tags;display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
+#work .project-links{grid-area:links;display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:19px;padding-top:16px;border-top:1px solid var(--line)}
+#work .project-links a{font-size:10px;font-weight:800;color:#d9e5f4}
+#work .project-links a span{color:var(--blue)}
+#work .project-symbol{
+  width:39px;height:39px;flex:0 0 39px;
+  display:grid;place-items:center;
+  border:1px solid rgba(121,195,255,.23);
+  border-radius:10px;color:var(--blue);
+  background:rgba(121,195,255,.06);
+  font:800 13px ui-monospace,SFMono-Regular,Consolas,monospace;
+}
+#work .project-category{
+  display:block;
+  color:var(--dim);
+  font-size:8px;font-weight:850;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  writing-mode:horizontal-tb;
+  transform:none;
+}
+#work .project-name-small{
+  display:block;
+  margin-top:3px;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:normal;
+  text-transform:none;
+  writing-mode:horizontal-tb;
+  transform:none;
+  white-space:normal;
+}
+#work .project-arrow{margin-left:auto;color:var(--blue);font-size:17px}
+
+#work .ci-box{
+  grid-area:ci;
+  align-self:stretch;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:rgba(3,7,12,.23);
+}
+#work .ci-label{
+  display:block;
+  color:var(--dim);
+  font-size:8px;
+  font-weight:850;
+  letter-spacing:.14em;
+  writing-mode:horizontal-tb;
+  transform:none;
+  white-space:normal;
+}
+#work .ci-box img{width:max-content;max-width:100%;height:20px;border:0}
+#work .ci-box p{margin:auto 0 0;color:var(--dim);font-size:9px;line-height:1.7}
+#work .ci-link{color:var(--blue);font-size:10px;font-weight:800}
+
+@media(max-width:760px){
+  #work .projects-grid{grid-template-columns:1fr}
+  #work .project,#work .project.featured{
+    grid-column:auto;
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    grid-template-areas:"head" "title" "summary" "points" "tags" "links" "ci";
+    min-height:0;
+    padding:21px;
+  }
+  #work .project.featured{padding:21px}
+  #work .project h3{font-size:19px}
+  #work .ci-box{margin-top:22px;min-height:180px}
+}
 </style>
 </head>
 <body>
