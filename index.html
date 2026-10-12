@@ -1101,6 +1101,112 @@ html[data-theme="light"] .hero-lede strong{color:#21384f}
   #work .project h3{font-size:19px}
   #work .ci-box{margin-top:22px;min-height:180px}
 }
+
+/* FINAL CI PANEL POLISH */
+#work .project,
+#work .project.featured{
+  grid-template-columns:minmax(0,1fr) 285px !important;
+  column-gap:28px !important;
+  padding:26px !important;
+  border-color:rgba(166,195,230,.13) !important;
+  background:
+    linear-gradient(145deg,rgba(18,27,40,.97),rgba(10,15,23,.98)) !important;
+}
+#work .project.featured{
+  grid-template-columns:minmax(0,1fr) 300px !important;
+  padding:28px !important;
+}
+#work .project .ci-box,
+#work .project.featured .ci-box{
+  position:relative !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-start !important;
+  align-self:stretch !important;
+  gap:0 !important;
+  min-height:245px !important;
+  padding:19px !important;
+  border:1px solid rgba(121,195,255,.16) !important;
+  border-radius:14px !important;
+  background:
+    linear-gradient(180deg,rgba(121,195,255,.045),rgba(255,255,255,.012)) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025) !important;
+  overflow:hidden !important;
+}
+#work .ci-box:before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg,var(--blue),rgba(116,240,228,.55),transparent);
+  opacity:.75;
+}
+#work .ci-label{
+  display:block !important;
+  margin:0 0 18px !important;
+  color:#91a5bd !important;
+  font-size:8px !important;
+  font-weight:850 !important;
+  letter-spacing:.16em !important;
+  line-height:1.4 !important;
+  writing-mode:horizontal-tb !important;
+  transform:none !important;
+}
+#work .ci-box>a:first-of-type{
+  display:flex !important;
+  align-items:center !important;
+  width:100% !important;
+  min-height:42px !important;
+  padding:9px 10px !important;
+  border:1px solid rgba(166,195,230,.11) !important;
+  border-radius:9px !important;
+  background:rgba(0,0,0,.2) !important;
+  overflow:hidden !important;
+}
+#work .ci-box img{
+  display:block !important;
+  width:auto !important;
+  max-width:100% !important;
+  height:20px !important;
+  object-fit:contain !important;
+}
+#work .ci-box p{
+  margin:17px 0 0 !important;
+  color:#8292a7 !important;
+  font-size:9px !important;
+  line-height:1.75 !important;
+}
+#work .ci-link{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  margin-top:auto !important;
+  padding-top:15px !important;
+  border-top:1px solid rgba(166,195,230,.10) !important;
+  color:#9fd1ff !important;
+  font-size:9px !important;
+  font-weight:800 !important;
+  letter-spacing:.01em !important;
+}
+#work .project-links{
+  margin-top:20px !important;
+  padding-top:15px !important;
+}
+#work .project:hover .ci-box{
+  border-color:rgba(121,195,255,.24) !important;
+}
+@media(max-width:760px){
+  #work .project,#work .project.featured{
+    grid-template-columns:1fr !important;
+    padding:21px !important;
+  }
+  #work .project .ci-box,
+  #work .project.featured .ci-box{
+    min-height:205px !important;
+    margin-top:20px !important;
+    padding:17px !important;
+  }
+}
 </style>
 </head>
 <body>
