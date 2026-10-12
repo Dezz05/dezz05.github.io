@@ -2245,64 +2245,92 @@ html[data-theme="light"] #toolkit .domain-list span{
 }
 
 <style id="light-mode-contrast-fix">
-/* LIGHT MODE — stronger readable text hierarchy */
+/* LIGHT MODE — high-contrast editorial text system */
 html[data-theme="light"]{
-  --text:#0b1726;
-  --muted:#43576b;
-  --dim:#5f7184;
+  --text:#0b1726 !important;
+  --muted:#334a5f !important;
+  --dim:#53677b !important;
+  --blue:#155fae !important;
+  --cyan:#00756e !important;
 }
-html[data-theme="light"] .hero-lede,
-html[data-theme="light"] .signal-copy p,
-html[data-theme="light"] .metric-label,
-html[data-theme="light"] .project-summary,
-html[data-theme="light"] .project-points,
-html[data-theme="light"] .execution-card p,
-html[data-theme="light"] .evidence-bottom p,
-html[data-theme="light"] .company-copy p,
-html[data-theme="light"] .accomplishment-points,
-html[data-theme="light"] .education-detail p,
-html[data-theme="light"] .contact-copy,
-html[data-theme="light"] .footer p{
-  color:var(--muted) !important;
+html[data-theme="light"] #main p,
+html[data-theme="light"] #main li{
+  color:#334a5f !important;
 }
-html[data-theme="light"] .signal-copy small,
-html[data-theme="light"] .metric-note,
-html[data-theme="light"] .employment-date,
-html[data-theme="light"] .education-date,
-html[data-theme="light"] .education-kind,
-html[data-theme="light"] .footer-links a,
-html[data-theme="light"] .footer-year{
-  color:var(--dim) !important;
-}
-html[data-theme="light"] .nav,
-html[data-theme="light"] .nav a,
-html[data-theme="light"] .theme-toggle{
-  color:#3f5266 !important;
-}
-html[data-theme="light"] .hero-lede strong,
-html[data-theme="light"] .signal-copy b,
-html[data-theme="light"] .metric-value,
-html[data-theme="light"] .company-copy h3,
-html[data-theme="light"] .education-detail h3{
-  color:var(--text) !important;
+html[data-theme="light"] #main h1,
+html[data-theme="light"] #main h2,
+html[data-theme="light"] #main h3,
+html[data-theme="light"] #main h4,
+html[data-theme="light"] #main strong{
+  color:#0b1726 !important;
 }
 html[data-theme="light"] .section-kicker,
 html[data-theme="light"] .overline,
+html[data-theme="light"] .hero-specialty,
 html[data-theme="light"] .execution-type,
 html[data-theme="light"] .execution-state,
 html[data-theme="light"] .execution-link,
 html[data-theme="light"] .project-category,
 html[data-theme="light"] .project-name-small,
+html[data-theme="light"] .project-arrow,
+html[data-theme="light"] .card-links a,
+html[data-theme="light"] .education-detail a{
+  color:#155fae !important;
+}
+html[data-theme="light"] .metric span,
+html[data-theme="light"] .metric-label,
+html[data-theme="light"] .metric-note,
+html[data-theme="light"] .signal-copy small,
+html[data-theme="light"] .chart-labels,
+html[data-theme="light"] .employment-date,
+html[data-theme="light"] .education-date,
+html[data-theme="light"] .education-kind,
+html[data-theme="light"] .footer p,
+html[data-theme="light"] .footer-links a,
+html[data-theme="light"] .footer-year{
+  color:#53677b !important;
+}
+html[data-theme="light"] .project-points{
+  color:#334a5f !important;
+}
+html[data-theme="light"] .project-points li,
+html[data-theme="light"] .accomplishment-points li,
+html[data-theme="light"] .principle p,
+html[data-theme="light"] .testing-step p{
+  color:#334a5f !important;
+}
+html[data-theme="light"] .project-tags span,
+html[data-theme="light"] .skill-tags span{
+  color:#31485d !important;
+}
 html[data-theme="light"] .card-links a{
-  color:#245f9f !important;
+  color:#155fae !important;
 }
-html[data-theme="light"] .accomplishment-points li::marker{
-  color:#1769d1 !important;
+html[data-theme="light"] .nav,
+html[data-theme="light"] .nav a,
+html[data-theme="light"] .theme-toggle{
+  color:#334a5f !important;
 }
+html[data-theme="light"] .nav a:hover,
 html[data-theme="light"] a:hover{
-  color:#1558a0;
+  color:#0f4f92 !important;
 }
-</style>
+html[data-theme="light"] .btn-secondary{
+  color:#21384f !important;
+}
+html[data-theme="light"] .execution-card>strong,
+html[data-theme="light"] .metric strong,
+html[data-theme="light"] .signal-copy b,
+html[data-theme="light"] .company-copy h3,
+html[data-theme="light"] .education-detail h3,
+html[data-theme="light"] .skill-card h3,
+html[data-theme="light"] .domain-heading h3,
+html[data-theme="light"] .domain-list strong{
+  color:#0b1726 !important;
+}
+html[data-theme="light"] #toolkit .domain-list span{
+  color:#53677b !important;
+}
 </style>
 </head>
 <body>
