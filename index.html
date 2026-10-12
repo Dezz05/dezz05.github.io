@@ -128,17 +128,17 @@
 
 /* Concrete CI execution evidence and linked case study */
 .execution-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.execution-card{display:flex;flex-direction:column;min-width:0;padding:19px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(145deg,rgba(17,26,39,.94),rgba(10,15,22,.92));transition:transform .2s,border-color .2s}
+.execution-card{display:flex;flex-direction:column;min-width:0;padding:19px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(145deg,var(--surface),var(--surface2));transition:transform .2s,border-color .2s,box-shadow .2s}
 .execution-card:hover{transform:translateY(-3px);border-color:rgba(121,195,255,.38)}
 .execution-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
 .execution-type{font:850 8px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.1em;color:var(--blue)}
 .execution-state{display:inline-flex;align-items:center;gap:5px;font:800 8px ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--green);letter-spacing:.07em}
 .execution-state i{width:5px;height:5px;border-radius:50%;background:var(--green)}
-.execution-card>strong{margin-top:23px;font-size:30px;line-height:1.1;letter-spacing:-.06em;color:#e9f4ff}
-.execution-card h3{font-size:13px;margin:7px 0}
+.execution-card>strong{margin-top:23px;font-size:30px;line-height:1.1;letter-spacing:-.06em;color:var(--text)}
+.execution-card h3{font-size:13px;margin:7px 0;color:var(--text)}
 .execution-card p{font-size:10px;line-height:1.8;color:var(--muted);margin:0 0 18px}
 .execution-link{margin-top:auto;padding-top:13px;border-top:1px solid var(--line);color:var(--blue);font-size:10px;font-weight:800}
-.evidence-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:14px;padding:16px 18px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.012)}
+.evidence-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:14px;padding:16px 18px;border:1px solid var(--line);border-radius:11px;background:var(--surface2)}
 .evidence-bottom p{margin:0;color:var(--dim);font-size:10px;line-height:1.8;max-width:580px}
 .evidence-bottom .btn{flex-shrink:0}
 @media(max-width:760px){.execution-grid{grid-template-columns:1fr}.execution-card{padding:18px}.execution-card>strong{margin-top:15px}.evidence-bottom{align-items:flex-start;flex-direction:column}.evidence-bottom .btn{width:100%;justify-content:space-between}}
@@ -218,6 +218,13 @@ html[data-theme="light"] .contact-copy{color:#52657a}
 html[data-theme="light"] .footer{background:#e7edf3}
 html[data-theme="light"] .footer-links a,html[data-theme="light"] .footer-year{color:#52657a}
 html[data-theme="light"] .footer p{color:#718297}
+html[data-theme="light"] .execution-card{background:linear-gradient(145deg,#ffffff,#f3f7fb);border-color:rgba(20,42,67,.11)}
+html[data-theme="light"] .execution-card>strong{color:#102033}
+html[data-theme="light"] .execution-card h3{color:#172b40}
+html[data-theme="light"] .execution-card p{color:#52657a}
+html[data-theme="light"] .execution-link{color:#1769d1;border-top-color:rgba(20,42,67,.11)}
+html[data-theme="light"] .evidence-bottom{background:#eaf0f6;border-color:rgba(20,42,67,.11)}
+html[data-theme="light"] .evidence-bottom p{color:#5f7184}
 </style>
 </head>
 <body>
