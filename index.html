@@ -2045,6 +2045,155 @@ body{font-size:var(--fs-body);line-height:1.7}
   #toolkit .domain-list>div{min-height:0 !important}
 }
 </style>
+<style id="light-mode-professional">
+/* LIGHT MODE — unified visual system */
+html[data-theme="light"]{
+  --bg:#f5f7fa;
+  --surface:#ffffff;
+  --surface2:#eef3f8;
+  --surface3:#e6edf4;
+  --line:rgba(16,36,58,.11);
+  --line2:rgba(16,36,58,.19);
+  --text:#0d1b2a;
+  --muted:#526477;
+  --dim:#738396;
+  --blue:#1769d1;
+  --cyan:#007f78;
+  --red:#d54d68;
+  --green:#15865b;
+}
+html[data-theme="light"] body{
+  background:var(--bg);
+  color:var(--text);
+}
+html[data-theme="light"] body:before{
+  opacity:.22 !important;
+  background:
+    radial-gradient(900px 520px at 85% 0%,rgba(45,126,224,.11),transparent 65%),
+    linear-gradient(rgba(43,91,140,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(43,91,140,.025) 1px,transparent 1px) !important;
+  background-size:auto,48px 48px,48px 48px !important;
+}
+html[data-theme="light"] body:after{opacity:.35 !important}
+html[data-theme="light"] .site-header{
+  background:rgba(245,247,250,.86) !important;
+  border-bottom-color:var(--line) !important;
+  backdrop-filter:blur(18px);
+}
+html[data-theme="light"] .nav{color:#536477}
+html[data-theme="light"] .nav a:hover{color:var(--text)}
+html[data-theme="light"] .theme-toggle,
+html[data-theme="light"] .nav .nav-contact{
+  background:rgba(255,255,255,.78) !important;
+  border-color:var(--line) !important;
+}
+html[data-theme="light"] .hero-console{
+  background:linear-gradient(145deg,#fff,#f0f5f9) !important;
+  border-color:var(--line2) !important;
+  box-shadow:0 24px 60px rgba(31,58,82,.09) !important;
+}
+html[data-theme="light"] .signal{
+  background:rgba(255,255,255,.72) !important;
+  border-color:var(--line) !important;
+  box-shadow:none !important;
+}
+html[data-theme="light"] .signal-copy b,
+html[data-theme="light"] .project h3,
+html[data-theme="light"] .execution-card h3,
+html[data-theme="light"] .section-head h2,
+html[data-theme="light"] .heading h2{
+  color:var(--text) !important;
+}
+html[data-theme="light"] .btn-secondary{
+  background:#fff !important;
+  border-color:var(--line2) !important;
+  color:#263b50 !important;
+}
+html[data-theme="light"] .btn-secondary:hover{
+  background:var(--surface2) !important;
+}
+html[data-theme="light"] .project,
+html[data-theme="light"] .execution-card,
+html[data-theme="light"] .case-study-card,
+html[data-theme="light"] .experience-card,
+html[data-theme="light"] .education-row,
+html[data-theme="light"] .skill-card,
+html[data-theme="light"] .principle,
+html[data-theme="light"] .testing-step,
+html[data-theme="light"] .accomplishment-item{
+  border-color:var(--line) !important;
+}
+html[data-theme="light"] .skill-card{
+  background:linear-gradient(145deg,#fff,#f4f7fa) !important;
+  box-shadow:none !important;
+}
+html[data-theme="light"] .skills-grid{
+  background:var(--line) !important;
+}
+html[data-theme="light"] .skill-tags span{
+  background:#f1f5f8 !important;
+  border-color:rgba(16,36,58,.09) !important;
+  color:#43586c !important;
+}
+html[data-theme="light"] #toolkit .domain-knowledge{
+  background:linear-gradient(145deg,#fff,#f4f7fa) !important;
+  border-color:var(--line) !important;
+  box-shadow:none !important;
+}
+html[data-theme="light"] #toolkit .domain-list{
+  background:var(--line) !important;
+  border-color:var(--line) !important;
+}
+html[data-theme="light"] #toolkit .domain-list>div{
+  background:#fbfcfd !important;
+}
+html[data-theme="light"] #toolkit .domain-list strong{
+  color:var(--text) !important;
+}
+html[data-theme="light"] #toolkit .domain-list span{
+  color:var(--muted) !important;
+}
+html[data-theme="light"] #work .projects{
+  border-top-color:var(--line) !important;
+}
+html[data-theme="light"] #work .projects > .card{
+  background:transparent !important;
+  border-bottom-color:var(--line) !important;
+  box-shadow:none !important;
+}
+html[data-theme="light"] #work .projects > .card:hover{
+  background:rgba(23,105,209,.025) !important;
+}
+html[data-theme="light"] #work .projects > .card .card-links{
+  border-left-color:var(--line) !important;
+}
+html[data-theme="light"] #work .projects > .card .card-links a{
+  color:#243b52 !important;
+}
+html[data-theme="light"] .education-list,
+html[data-theme="light"] #education .education-list{
+  background:#fff !important;
+  border-color:var(--line) !important;
+  box-shadow:none !important;
+}
+html[data-theme="light"] #education .education-row{
+  background:#fff !important;
+  border-bottom-color:var(--line) !important;
+}
+html[data-theme="light"] #education .education-row:hover{
+  background:#f8fafc !important;
+}
+html[data-theme="light"] .contact-section{
+  background:
+    radial-gradient(650px 340px at 10% 50%,rgba(50,133,228,.10),transparent 65%),
+    radial-gradient(500px 300px at 92% 10%,rgba(213,77,104,.045),transparent 68%),
+    #edf3f7 !important;
+}
+html[data-theme="light"] .footer{
+  background:#e8eef3 !important;
+  border-top-color:var(--line) !important;
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
