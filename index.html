@@ -1441,6 +1441,139 @@ html[data-theme="light"] .hero-lede strong{color:#21384f}
 }
 </style>
 
+
+<style id="global-ui-consistency">
+/* GLOBAL UI + TYPOGRAPHY CONSISTENCY */
+:root{
+  --fs-xs:9px;
+  --fs-sm:10px;
+  --fs-md:11px;
+  --fs-body:12px;
+  --fs-lg:14px;
+  --fs-h3:16px;
+  --fs-h2:clamp(33px,4.1vw,49px);
+  --section-y:96px;
+}
+body{font-size:var(--fs-body);line-height:1.7}
+.wrap{width:min(var(--max),calc(100% - 56px))}
+.section{padding-block:var(--section-y)}
+.section-head,.heading{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:34px;margin-bottom:35px
+}
+.section-kicker,.heading .eyebrow{
+  margin:0 0 12px;font-size:var(--fs-xs);line-height:1.3;
+  font-weight:850;letter-spacing:.17em
+}
+.section-head h2,.contact h2,.heading h2{
+  margin:0;font-size:var(--fs-h2);line-height:1.11;
+  letter-spacing:-.06em;font-weight:770
+}
+.section-intro,.heading .intro{
+  max-width:425px;margin:0;color:var(--muted);
+  font-size:var(--fs-body);line-height:1.9
+}
+
+/* Navigation + header */
+.nav{font-size:var(--fs-md);line-height:1.4}
+.brand-text strong{font-size:var(--fs-sm)}
+.brand-text small{font-size:var(--fs-xs)}
+.nav .nav-contact{font-size:var(--fs-md)}
+.btn{font-size:var(--fs-md);line-height:1.4}
+.availability{font-size:var(--fs-sm);line-height:1.5}
+
+/* Hero */
+.overline{font-size:var(--fs-xs);line-height:1.3}
+.hero-lede{font-size:14px;line-height:1.95}
+.hero-specialty{font-size:var(--fs-sm);line-height:1.5}
+.console-top{font-size:var(--fs-xs)}
+.console-status{font-size:8px}
+.console-heading small{font-size:var(--fs-xs)}
+.console-heading h2{font-size:21px}
+.console-chip{font-size:8px}
+.signal-copy b{font-size:var(--fs-sm)}
+.signal-copy small{font-size:var(--fs-xs)}
+.signal-value{font-size:var(--fs-xs)}
+.chart-labels,.console-foot{font-size:8px}
+
+/* Metrics */
+.metric strong{font-size:26px}
+.metric span{font-size:var(--fs-xs);line-height:1.4}
+
+/* Shared card typography */
+.project h3,#work .card h3{font-size:21px;line-height:1.3}
+.project-summary,#work .card p{font-size:var(--fs-md);line-height:1.9}
+.project-points,#work .points{font-size:var(--fs-sm);line-height:1.55}
+.project-tags span,#work .tags span{font-size:var(--fs-xs);line-height:1.35}
+.project-links a,#work .card-links a{font-size:var(--fs-sm);line-height:1.4}
+.project-category,#work .type{font-size:8px;line-height:1.3}
+
+/* Evidence / principles */
+.principle h3{font-size:15px;line-height:1.4}
+.principle p{font-size:var(--fs-md);line-height:1.85}
+.principle-example b{font-size:8px}
+.principle-example span{font-size:var(--fs-sm);line-height:1.75}
+.testing-step h3{font-size:15px;line-height:1.4}
+.testing-step p{font-size:var(--fs-sm);line-height:1.85}
+.testing-step-no{font-size:9px}
+.step-focus b{font-size:8px}
+.step-focus span{font-size:var(--fs-sm);line-height:1.6}
+.testing-example h3{font-size:14px;line-height:1.45}
+.testing-example>p{font-size:var(--fs-md);line-height:1.9}
+
+/* Experience / education */
+.experience-top h3{font-size:14px}
+.experience-top p{font-size:var(--fs-sm)}
+.timeline-item h4{font-size:var(--fs-md);line-height:1.5}
+.timeline-item .date{font-size:var(--fs-xs)}
+.timeline-item p{font-size:var(--fs-sm);line-height:1.85}
+.experience-subheading{font-size:var(--fs-sm)}
+.experience-highlights b{font-size:var(--fs-sm)}
+.experience-highlights span{font-size:var(--fs-sm);line-height:1.85}
+.accomplishment-item h4{font-size:var(--fs-md)}
+.accomplishment-item p,.accomplishment-points li{font-size:var(--fs-sm);line-height:1.85}
+.education-detail h3{font-size:14px;line-height:1.5}
+.education-detail p{font-size:var(--fs-md);line-height:1.75}
+.education-date{font-size:var(--fs-sm)}
+.education-kind{font-size:8px}
+.education-detail a{font-size:var(--fs-sm)}
+.cert-card b{font-size:var(--fs-sm)}
+.cert-card small{font-size:var(--fs-xs)}
+
+/* Toolkit */
+.skill-card h3{font-size:var(--fs-md);line-height:1.5}
+.skill-tags span{font-size:var(--fs-xs);line-height:1.35}
+
+/* Contact + footer */
+.contact-copy{font-size:var(--fs-body);line-height:1.9}
+.contact-email{font-size:var(--fs-md)}
+.footer-brand,.footer p,.footer-links a,.footer-year{font-size:var(--fs-xs)}
+
+/* Consistent card geometry */
+.project,.experience-card,.education-card,.skill-card,.principle,
+.testing-step,.execution-card,.accomplishment-item{
+  border-radius:14px
+}
+
+/* Responsive scale */
+@media(max-width:760px){
+  :root{--section-y:70px}
+  .wrap{width:min(var(--max),calc(100% - 36px))}
+  .section-head,.heading{align-items:flex-start;flex-direction:column;gap:15px;margin-bottom:26px}
+  .section-head h2,.contact h2,.heading h2{font-size:37px}
+  .section-intro,.heading .intro{font-size:11px}
+  .hero-lede{font-size:13px}
+  .project h3,#work .card h3{font-size:20px}
+  .project-summary,#work .card p{font-size:var(--fs-md)}
+  .metric strong{font-size:24px}
+}
+@media(max-width:390px){
+  .wrap{width:calc(100% - 28px)}
+  .section-head h2,.contact h2,.heading h2{font-size:34px}
+  .hero-lede{font-size:12px}
+}
+</style>
+
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
