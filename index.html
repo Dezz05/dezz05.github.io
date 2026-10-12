@@ -1719,6 +1719,135 @@ body{font-size:var(--fs-body);line-height:1.7}
   }
 }
 </style>
+<style id="selected-work-listed-layout-fix">
+/* SELECTED WORK — actual listed rows */
+#work .projects{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:0 !important;
+  border-top:1px solid var(--line) !important;
+}
+#work .card,
+#work .card.featured{
+  display:grid !important;
+  grid-template-columns:190px minmax(210px,.7fr) minmax(280px,1.45fr) 145px !important;
+  grid-template-areas:"head title content links" !important;
+  align-items:center !important;
+  gap:24px !important;
+  width:100% !important;
+  min-height:142px !important;
+  padding:23px 4px !important;
+  border:0 !important;
+  border-bottom:1px solid var(--line) !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+#work .card:hover,
+#work .card.featured:hover{
+  background:linear-gradient(90deg,rgba(121,195,255,.035),rgba(121,195,255,.012),transparent) !important;
+}
+#work .card-top{
+  grid-area:head !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  margin:0 !important;
+  min-width:0 !important;
+}
+#work .project-icon{
+  width:36px !important;
+  height:36px !important;
+  flex:none !important;
+  border-radius:9px !important;
+}
+#work .type{
+  font-size:8px !important;
+  line-height:1.35 !important;
+  letter-spacing:.13em !important;
+}
+#work .card h3{
+  grid-area:title !important;
+  margin:0 !important;
+  font-size:16px !important;
+  line-height:1.4 !important;
+  letter-spacing:-.025em !important;
+}
+#work .card>p{
+  grid-area:content !important;
+  margin:0 !important;
+  max-width:620px !important;
+  color:var(--muted) !important;
+  font-size:11px !important;
+  line-height:1.75 !important;
+}
+#work .points{
+  display:none !important;
+}
+#work .tags{
+  display:none !important;
+}
+#work .card-links{
+  grid-area:links !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-end !important;
+  gap:7px !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  white-space:nowrap !important;
+}
+#work .card-links a{
+  font-size:9px !important;
+  line-height:1.4 !important;
+}
+#work .arrow{
+  position:absolute !important;
+  top:23px !important;
+  right:4px !important;
+  font-size:15px !important;
+  opacity:.65 !important;
+}
+@media(max-width:900px){
+  #work .card,
+  #work .card.featured{
+    grid-template-columns:155px minmax(180px,.75fr) minmax(220px,1.25fr) 110px !important;
+    gap:18px !important;
+  }
+}
+@media(max-width:760px){
+  #work .card,
+  #work .card.featured{
+    grid-template-columns:42px minmax(0,1fr) auto !important;
+    grid-template-areas:"head title links" "head content links" !important;
+    gap:7px 13px !important;
+    min-height:0 !important;
+    padding:20px 2px !important;
+  }
+  #work .card-top{
+    align-self:start !important;
+  }
+  #work .type{
+    display:none !important;
+  }
+  #work .card h3{
+    font-size:15px !important;
+  }
+  #work .card>p{
+    font-size:10px !important;
+    line-height:1.7 !important;
+  }
+  #work .card-links{
+    align-items:flex-end !important;
+    gap:4px !important;
+  }
+  #work .card-links a{
+    font-size:8px !important;
+  }
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
