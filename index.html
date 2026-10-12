@@ -2244,6 +2244,65 @@ html[data-theme="light"] #toolkit .domain-list span{
   color:#526477 !important;
 }
 
+<style id="light-mode-contrast-fix">
+/* LIGHT MODE — stronger readable text hierarchy */
+html[data-theme="light"]{
+  --text:#0b1726;
+  --muted:#43576b;
+  --dim:#5f7184;
+}
+html[data-theme="light"] .hero-lede,
+html[data-theme="light"] .signal-copy p,
+html[data-theme="light"] .metric-label,
+html[data-theme="light"] .project-summary,
+html[data-theme="light"] .project-points,
+html[data-theme="light"] .execution-card p,
+html[data-theme="light"] .evidence-bottom p,
+html[data-theme="light"] .company-copy p,
+html[data-theme="light"] .accomplishment-points,
+html[data-theme="light"] .education-detail p,
+html[data-theme="light"] .contact-copy,
+html[data-theme="light"] .footer p{
+  color:var(--muted) !important;
+}
+html[data-theme="light"] .signal-copy small,
+html[data-theme="light"] .metric-note,
+html[data-theme="light"] .employment-date,
+html[data-theme="light"] .education-date,
+html[data-theme="light"] .education-kind,
+html[data-theme="light"] .footer-links a,
+html[data-theme="light"] .footer-year{
+  color:var(--dim) !important;
+}
+html[data-theme="light"] .nav,
+html[data-theme="light"] .nav a,
+html[data-theme="light"] .theme-toggle{
+  color:#3f5266 !important;
+}
+html[data-theme="light"] .hero-lede strong,
+html[data-theme="light"] .signal-copy b,
+html[data-theme="light"] .metric-value,
+html[data-theme="light"] .company-copy h3,
+html[data-theme="light"] .education-detail h3{
+  color:var(--text) !important;
+}
+html[data-theme="light"] .section-kicker,
+html[data-theme="light"] .overline,
+html[data-theme="light"] .execution-type,
+html[data-theme="light"] .execution-state,
+html[data-theme="light"] .execution-link,
+html[data-theme="light"] .project-category,
+html[data-theme="light"] .project-name-small,
+html[data-theme="light"] .card-links a{
+  color:#245f9f !important;
+}
+html[data-theme="light"] .accomplishment-points li::marker{
+  color:#1769d1 !important;
+}
+html[data-theme="light"] a:hover{
+  color:#1558a0;
+}
+</style>
 </style>
 </head>
 <body>
