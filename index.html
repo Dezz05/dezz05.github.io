@@ -1776,6 +1776,108 @@ body{font-size:var(--fs-body);line-height:1.7}
   #work .projects > .card .card-links a{font-size:8px !important}
 }
 </style>
+<style id="education-professional">
+/* EDUCATION — professional structured list */
+#education .education-list{
+  list-style:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  border:1px solid var(--line) !important;
+  border-radius:14px !important;
+  overflow:hidden !important;
+  background:rgba(255,255,255,.008) !important;
+}
+#education .education-row{
+  display:grid !important;
+  grid-template-columns:145px minmax(0,1fr) 125px !important;
+  gap:28px !important;
+  align-items:center !important;
+  min-height:118px !important;
+  padding:26px 28px !important;
+  margin:0 !important;
+  border:0 !important;
+  border-bottom:1px solid var(--line) !important;
+  background:transparent !important;
+  transition:background .2s ease !important;
+}
+#education .education-row:last-child{
+  border-bottom:0 !important;
+}
+#education .education-row:hover{
+  background:rgba(121,195,255,.025) !important;
+}
+#education .education-date{
+  align-self:start !important;
+  padding-top:3px !important;
+  color:var(--blue) !important;
+  font:600 9px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace !important;
+  letter-spacing:.06em !important;
+  white-space:nowrap !important;
+}
+#education .education-detail{
+  min-width:0 !important;
+}
+#education .education-detail h3{
+  margin:0 0 7px !important;
+  color:var(--text) !important;
+  font-size:16px !important;
+  line-height:1.4 !important;
+  font-weight:720 !important;
+  letter-spacing:-.025em !important;
+}
+#education .education-detail p{
+  margin:0 !important;
+  color:var(--muted) !important;
+  font-size:11px !important;
+  line-height:1.75 !important;
+}
+#education .education-detail a{
+  display:inline-block !important;
+  margin-top:10px !important;
+  color:var(--blue) !important;
+  font-size:10px !important;
+  line-height:1.4 !important;
+  font-weight:750 !important;
+}
+#education .education-kind{
+  justify-self:end !important;
+  align-self:start !important;
+  padding-top:3px !important;
+  color:var(--dim) !important;
+  font:700 8px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace !important;
+  letter-spacing:.14em !important;
+  text-align:right !important;
+}
+@media(max-width:760px){
+  #education .education-list{
+    border-radius:12px !important;
+  }
+  #education .education-row{
+    grid-template-columns:1fr auto !important;
+    gap:8px 14px !important;
+    min-height:0 !important;
+    padding:20px 18px !important;
+  }
+  #education .education-date{
+    grid-column:1 !important;
+    grid-row:1 !important;
+  }
+  #education .education-kind{
+    grid-column:2 !important;
+    grid-row:1 !important;
+  }
+  #education .education-detail{
+    grid-column:1 / -1 !important;
+    grid-row:2 !important;
+  }
+  #education .education-detail h3{
+    font-size:14px !important;
+  }
+  #education .education-detail p{
+    font-size:10px !important;
+  }
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
