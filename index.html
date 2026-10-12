@@ -1725,6 +1725,41 @@ body{font-size:var(--fs-body);line-height:1.7}
   #work .projects > .card .card-links a{font-size:8px !important}
 }
 </style>
+<style id="selected-work-clean-bg">
+/* SELECTED WORK — remove all legacy decorative/background effects */
+#work .projects > .card,
+#work .projects > .card.featured{
+  background:#080b11 !important;
+  background-image:none !important;
+  box-shadow:none !important;
+}
+#work .projects > .card::before,
+#work .projects > .card::after,
+#work .projects > .card.featured::before,
+#work .projects > .card.featured::after{
+  display:none !important;
+  content:none !important;
+  opacity:0 !important;
+  background:none !important;
+  box-shadow:none !important;
+}
+#work .projects > .card .arrow,
+#work .projects > .card-top .arrow{
+  display:none !important;
+  visibility:hidden !important;
+  opacity:0 !important;
+  width:0 !important;
+  height:0 !important;
+}
+#work .projects > .card:hover,
+#work .projects > .card:hover::before,
+#work .projects > .card:hover::after{
+  background:#080b11 !important;
+  background-image:none !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
