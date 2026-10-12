@@ -29,11 +29,9 @@ The portfolio includes a dated snapshot of recent successful runs recorded on 11
 
 These are specific recorded runs against public demo environments; they are not a guarantee of later run results or a performance benchmark. The [API QA case study](https://sraagul99.github.io/qa-case-study.html) explains the test design, risks, assertions, limitations, and evidence links.
 
-## QA case studies
+## QA case study
 
-- **[API contract testing](https://sraagul99.github.io/qa-case-study.html)** — evidence-led review of Postman/Newman test design, assertions, a recorded CI run, and project limitations.
-- **[Agentic AI in QA](https://sraagul99.github.io/agentic-ai-qa-case-study.html)** — a conceptual design for bounded agent workflows, human approval, safe tool permissions, and evaluation measures. It is not presented as a production deployment.
-- **[Test automation and AI](https://sraagul99.github.io/automation-ai-case-study.html)** — a QA perspective on automation strategy, sustainable maintenance, AI-assisted test work, human exploration, and meaningful metrics.
+- **[API contract testing](https://sraagul99.github.io/qa-case-study.html)** — evidence-led review of Postman/Newman test design, risk-based assertions, a recorded CI run, and project limitations.
 
 ## Design and implementation
 
